@@ -1,57 +1,603 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fale Conosco | Finanças Estáveis</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Entre em contato com o DuFerreira | Investe para sugerir temas, apontar correções ou enviar comentários sobre o site.">
+
+    <title>Contatos | DuFerreira | Investe</title>
+
+    <!-- Estilos gerais do site -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Estilos específicos desta página -->
+    <style>
+        /* ==========================================
+           PÁGINA DE CONTATOS
+           ========================================== */
+
+        .pagina-contatos {
+            margin: 0;
+            background: #f4f6f8;
+            color: #35473e;
+        }
+
+        .pagina-contatos main,
+        .pagina-contatos main * {
+            box-sizing: border-box;
+        }
+
+        .pagina-contatos main {
+            display: block;
+
+            width: min(1120px, calc(100% - 40px));
+            max-width: 1120px;
+            min-width: 0;
+
+            margin: 0 auto;
+            padding: 36px 0 64px;
+        }
+
+        /* Link para navegação por teclado */
+
+        .pagina-contatos .pular-conteudo {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            z-index: 1000;
+
+            padding: 12px 18px;
+
+            background: #193f32;
+            border-radius: 8px;
+            color: #ffffff;
+            text-decoration: none;
+
+            transform: translateY(-200%);
+        }
+
+        .pagina-contatos .pular-conteudo:focus {
+            transform: translateY(0);
+            outline: 3px solid #e5b95c;
+            outline-offset: 3px;
+        }
+
+        /* Apresentação */
+
+        .pagina-contatos .contato-apresentacao {
+            margin: 0 0 32px;
+            padding: clamp(28px, 5vw, 48px);
+
+            background: #eaf5ee;
+            border: 1px solid #d7e5dc;
+            border-radius: 22px;
+        }
+
+        .pagina-contatos .contato-etiqueta {
+            display: block;
+            margin-bottom: 16px;
+
+            color: #285c48;
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        }
+
+        .pagina-contatos h1 {
+            margin: 0 0 18px;
+
+            color: #193f32;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2;
+        }
+
+        .pagina-contatos .contato-apresentacao p {
+            max-width: 800px;
+            margin: 0;
+
+            color: #52635b;
+            font-size: 1.1rem;
+            line-height: 1.85;
+        }
+
+        /* Organização da página */
+
+        .pagina-contatos .contato-grade {
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+            align-items: start;
+            gap: 28px;
+        }
+
+        .pagina-contatos .contato-painel {
+            min-width: 0;
+            margin: 0;
+            padding: clamp(24px, 3vw, 32px);
+
+            background: #ffffff;
+            border: 1px solid #dce5df;
+            border-radius: 16px;
+        }
+
+        .pagina-contatos .contato-painel h2 {
+            margin: 0 0 16px;
+
+            color: #193f32;
+            font-size: 1.4rem;
+            line-height: 1.35;
+        }
+
+        .pagina-contatos .contato-painel p {
+            margin: 0 0 16px;
+            line-height: 1.8;
+        }
+
+        .pagina-contatos .contato-painel> :last-child {
+            margin-bottom: 0;
+        }
+
+        .pagina-contatos .contato-descricao {
+            color: #5b6861;
+            font-size: 0.95rem;
+        }
+
+        /* Formulário */
+
+        .pagina-contatos #form-contato {
+            width: 100%;
+            margin: 0;
+        }
+
+        .pagina-contatos .contato-campos {
+            min-width: 0;
+            margin: 24px 0 0;
+            padding: 0;
+
+            border: 0;
+        }
+
+        .pagina-contatos .contato-legenda {
+            margin-bottom: 20px;
+            padding: 0;
+
+            color: #234b3b;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .pagina-contatos .contato-campo {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+
+            margin-bottom: 22px;
+        }
+
+        .pagina-contatos .contato-campo label {
+            color: #234b3b;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .pagina-contatos .contato-campo input,
+        .pagina-contatos .contato-campo select,
+        .pagina-contatos .contato-campo textarea {
+            display: block;
+
+            width: 100%;
+            min-width: 0;
+            min-height: 48px;
+            margin: 0;
+            padding: 12px 14px;
+
+            background: #ffffff;
+            border: 1px solid #aebeb4;
+            border-radius: 8px;
+
+            color: #243d30;
+            font: inherit;
+            line-height: 1.6;
+        }
+
+        .pagina-contatos .contato-campo textarea {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .pagina-contatos .contato-campo small {
+            color: #59675f;
+            font-size: 0.85rem;
+            line-height: 1.65;
+        }
+
+        .pagina-contatos .contato-campo input::placeholder,
+        .pagina-contatos .contato-campo textarea::placeholder {
+            color: #68766d;
+            opacity: 1;
+        }
+
+        .pagina-contatos .contato-privacidade {
+            padding: 16px;
+
+            background: #f1f6f3;
+            border: 1px solid #d7e5dc;
+            border-radius: 8px;
+
+            color: #52635b;
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        /* Botão */
+
+        .pagina-contatos .contato-botao {
+            display: inline-block;
+
+            min-height: 48px;
+            padding: 14px 22px;
+
+            background: #285c48;
+            border: 1px solid #285c48;
+            border-radius: 9px;
+
+            color: #ffffff;
+            font: inherit;
+            font-weight: 700;
+            line-height: 1.5;
+            text-align: center;
+
+            cursor: pointer;
+
+            transition:
+                background-color 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .pagina-contatos .contato-botao:hover {
+            background: #1d4636;
+            border-color: #1d4636;
+        }
+
+        /* Orientações laterais */
+
+        .pagina-contatos .contato-orientacoes {
+            display: grid;
+            gap: 22px;
+            min-width: 0;
+        }
+
+        .pagina-contatos .contato-orientacoes ul {
+            margin: 0;
+            padding-left: 22px;
+        }
+
+        .pagina-contatos .contato-orientacoes li {
+            margin-bottom: 14px;
+            line-height: 1.8;
+        }
+
+        .pagina-contatos .contato-orientacoes li:last-child {
+            margin-bottom: 0;
+        }
+
+        .pagina-contatos .contato-orientacoes a {
+            color: #285c48;
+            font-weight: 700;
+            line-height: 1.7;
+            text-underline-offset: 4px;
+        }
+
+        /* Navegação por teclado */
+
+        .pagina-contatos main :focus-visible {
+            outline: 3px solid #367557;
+            outline-offset: 4px;
+        }
+
+        /* Telas menores */
+
+        @media (max-width: 850px) {
+            .pagina-contatos .contato-grade {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .pagina-contatos main {
+                width: calc(100% - 24px);
+                padding: 24px 0 40px;
+            }
+
+            .pagina-contatos .contato-apresentacao {
+                padding: 28px 22px;
+                border-radius: 16px;
+            }
+
+            .pagina-contatos .contato-painel {
+                padding: 24px 20px;
+            }
+
+            .pagina-contatos .contato-botao {
+                width: 100%;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .pagina-contatos .contato-botao {
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="pagina-contatos">
+    <a class="pular-conteudo" href="#conteudo">
+        Pular para o conteúdo
+    </a>
+
+    <!-- Cabeçalho -->
     <header>
-        <div class="logo">
-            <h1>Finanças em dia</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="comportamento.html">Mentalidade & Hábitos</a></li>
-                <li><a href="reserva.html">Reserva & Carteira</a></li>
-                <li><a href="calculadoras.html">Ferramentas & Calculadoras</a></li>
-                <li><a href="investimentos.html">Longo Prazo & Ações</a></li>
-                <li><a href="cripto.html">Criptomoedas</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
+        <a class="logo" href="index.html" aria-label="DuFerreira | Investe — Home">
+            DuFerreira | Investe
+        </a>
+
+        <nav aria-label="Menu principal">
+            <ul class="menu-principal">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="comportamento.html">
+                        Mentalidade &amp; Hábitos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="educacao-financeira.html">
+                        Educação Financeira
+                    </a>
+                </li>
+
+                <li>
+                    <a href="renda-fixa.html">
+                        Renda Fixa
+                    </a>
+                </li>
+
+                <li>
+                    <a href="renda-variavel.html">
+                        Renda Variável
+                    </a>
+                </li>
+
+                <li>
+                    <details class="menu-ferramentas">
+                        <summary>Ferramentas</summary>
+
+                        <ul class="submenu">
+                            <li>
+                                <a href="calculadoras.html">
+                                    Calculadoras
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <a href="contatos.html" class="active" aria-current="page">
+                        Contatos
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <!-- Conteúdo principal -->
+    <main id="conteudo" tabindex="-1">
+        <section class="contato-apresentacao" aria-labelledby="titulo-pagina">
+            <span class="contato-etiqueta">
+                Sua participação importa
+            </span>
 
-    <!-- Conteúdo Página -->
-    <main>
-        <section class="boas-vindas">
-            <h2>Entre em Contato</h2>
-            <p>Tem alguma dúvida sobre planejamento, alocação de ativos ou quer sugerir um tema para o nosso blog? Preencha o formulário abaixo e nossa equipe responderá em breve.</p>
-            
-            <!-- Formulário estruturado para coletar dados -->
-            <form action="#" method="POST" style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1rem; max-width: 500px;">
-                <label style="font-weight: 600; color: #1b4332;">Nome Completo:</label>
-                <input type="text" placeholder="Seu nome" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
+            <h1 id="titulo-pagina">
+                Entre em contato
+            </h1>
 
-                <label style="font-weight: 600; color: #1b4332;">E-mail:</label>
-                <input type="email" placeholder="seu-email@provedor.com" required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px;">
-
-                <label style="font-weight: 600; color: #1b4332;">Mensagem:</label>
-                <textarea rows="5" placeholder="Digite sua mensagem aqui..." required style="padding: 0.8rem; border: 1px solid #ccc; border-radius: 4px; resize: vertical;"></textarea>
-
-                <button type="submit" style="padding: 1rem; background-color: #1b4332; color: white; font-weight: bold; border: none; border-radius: 4px; cursor: pointer; transition: background 0.3s;">Enviar Mensagem</button>
-            </form>
+            <p>
+                Quer sugerir um tema, apontar uma informação
+                que precisa de revisão ou comentar uma ferramenta?
+                Este espaço foi pensado para ouvir você.
+            </p>
         </section>
+
+        <div class="contato-grade">
+            <!-- Formulário -->
+            <section class="contato-painel" aria-labelledby="titulo-formulario">
+                <h2 id="titulo-formulario">
+                    Escreva sua mensagem
+                </h2>
+
+                <p class="contato-descricao">
+                    Preencha os campos abaixo.
+                    Os campos marcados com * são obrigatórios.
+                </p>
+
+                <form id="form-contato" action="https://formsubmit.co/duhnferreira@gmail.com" method="POST">
+                    <!-- Assunto do e-mail recebido -->
+                    <input type="hidden" name="_subject" value="Nova mensagem — DuFerreira | Investe">
+
+                    <fieldset class="contato-campos">
+                        <legend class="contato-legenda">
+                            Dados da mensagem
+                        </legend>
+
+                        <div class="contato-campo">
+                            <label for="contato-nome">
+                                Nome *
+                            </label>
+
+                            <input type="text" id="contato-nome" name="nome" autocomplete="name" maxlength="120"
+                                placeholder="Como podemos chamar você?" required>
+                        </div>
+
+                        <div class="contato-campo">
+                            <label for="contato-email">
+                                E-mail *
+                            </label>
+
+                            <input type="email" id="contato-email" name="email" autocomplete="email" maxlength="254"
+                                placeholder="seuemail@exemplo.com" required>
+                        </div>
+
+                        <div class="contato-campo">
+                            <label for="contato-assunto">
+                                Assunto *
+                            </label>
+
+                            <select id="contato-assunto" name="assunto" required>
+                                <option value="">
+                                    Selecione um assunto
+                                </option>
+
+                                <option value="Sugestão de conteúdo">
+                                    Sugestão de conteúdo
+                                </option>
+
+                                <option value="Correção de informação">
+                                    Correção de informação
+                                </option>
+
+                                <option value="Problema em uma calculadora">
+                                    Problema em uma calculadora
+                                </option>
+
+                                <option value="Problema de navegação">
+                                    Problema de navegação
+                                </option>
+
+                                <option value="Outro assunto">
+                                    Outro assunto
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="contato-campo">
+                            <label for="contato-mensagem">
+                                Mensagem *
+                            </label>
+
+                            <textarea id="contato-mensagem" name="mensagem" rows="7" maxlength="5000"
+                                placeholder="Conte qual é sua sugestão ou dúvida." aria-describedby="ajuda-mensagem"
+                                required></textarea>
+
+                            <small id="ajuda-mensagem">
+                                Até 5.000 caracteres.
+                                Se encontrou um erro, informe o nome
+                                da página ou da ferramenta.
+                                Não envie informações sensíveis.
+                            </small>
+                        </div>
+
+                        <p class="contato-privacidade">
+                            Ao enviar, seu nome, e-mail, assunto
+                            e mensagem serão encaminhados pelo
+                            serviço externo FormSubmit para
+                            atendimento deste contato.
+                            Não envie senhas, CPF, dados bancários
+                            ou documentos pessoais.
+                        </p>
+
+                        <button type="submit" class="contato-botao">
+                            Enviar mensagem
+                        </button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <!-- Informações complementares -->
+            <aside class="contato-orientacoes" aria-label="Orientações para contato">
+                <section class="contato-painel">
+                    <h2>Como você pode ajudar</h2>
+
+                    <ul>
+                        <li>
+                            Sugerindo assuntos que gostaria
+                            de entender melhor.
+                        </li>
+
+                        <li>
+                            Informando links que não abrem
+                            ou problemas de visualização.
+                        </li>
+
+                        <li>
+                            Apontando informações que parecem
+                            incorretas ou desatualizadas.
+                        </li>
+
+                        <li>
+                            Explicando o que aconteceu
+                            ao usar uma calculadora.
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="contato-painel">
+                    <h2>Cuide dos seus dados</h2>
+
+                    <p>
+                        Não envie senhas, códigos de acesso,
+                        CPF, dados bancários ou documentos pessoais.
+                    </p>
+
+                    <p>
+                        Para relatar um problema em uma simulação,
+                        prefira valores fictícios e descreva
+                        os passos realizados.
+                    </p>
+                </section>
+
+                <section class="contato-painel">
+                    <h2>Sobre o conteúdo</h2>
+
+                    <p>
+                        O DuFerreira | Investe apresenta
+                        informações educativas.
+                        Este canal não substitui atendimento
+                        de banco, corretora, RH ou orientação
+                        profissional para situações individuais.
+                    </p>
+
+                    <a href="educacao-financeira.html">
+                        Explorar Educação Financeira
+                    </a>
+                </section>
+            </aside>
+        </div>
     </main>
 
-    <!-- Rodapé Global -->
+    <!-- Rodapé -->
     <footer>
-        <p>&copy; 2026 com suas finanças em dia </p>
-    </footer>
+        <p class="nome-rodape">
+            DuFerreira | Investe
+        </p>
 
+        <p>
+            Educação financeira com linguagem simples.
+        </p>
+
+        <p>
+            &copy; 2026 DuFerreira | Investe
+        </p>
+    </footer>
 </body>
+
 </html>

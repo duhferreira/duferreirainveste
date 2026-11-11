@@ -1,0 +1,284 @@
+/* CALCULADORAS E SIMULADORES */
+
+.pagina-calculadoras main,
+.pagina-calculadoras main * {
+    box-sizing: border-box;
+}
+
+.pagina-calculadoras main {
+    display: block;
+    width: min(1000px, calc(100% - 32px));
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 32px 0 56px;
+}
+
+/* Área principal */
+
+.pagina-calculadoras .conteudo-artigo {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: clamp(22px, 4vw, 40px);
+
+    background: #ffffff;
+    border: 1px solid #dce5df;
+    border-radius: 18px;
+}
+
+/* Títulos e textos */
+
+.pagina-calculadoras h1 {
+    margin: 0 0 20px;
+
+    color: #193f32;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+}
+
+.pagina-calculadoras main h2 {
+    margin: 0 0 18px;
+
+    color: #193f32;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.pagina-calculadoras main p {
+    line-height: 1.8;
+}
+
+.pagina-calculadoras .introducao {
+    margin-bottom: 28px;
+}
+
+/* Painéis das calculadoras */
+
+.pagina-calculadoras .box-calculadora {
+    margin: 28px 0;
+    padding: clamp(20px, 3vw, 30px);
+
+    background: #f8faf9;
+    border: 1px solid #cbdcd1;
+    border-radius: 14px;
+
+    scroll-margin-top: 110px;
+}
+
+.pagina-calculadoras .descricao-calculadora {
+    margin: 0 0 24px;
+    color: #55635b;
+}
+
+/* Campos dos formulários */
+
+.pagina-calculadoras .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.pagina-calculadoras .form-group label {
+    color: #234b3b;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.pagina-calculadoras .form-group input,
+.pagina-calculadoras .form-group select {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 12px;
+
+    background: #ffffff;
+    border: 1px solid #aebeb4;
+    border-radius: 7px;
+
+    color: #243d30;
+    font: inherit;
+}
+
+.pagina-calculadoras .form-group small {
+    color: #59675f;
+    font-size: 0.85rem;
+    line-height: 1.65;
+}
+
+/* Datas lado a lado */
+
+.pagina-calculadoras .grupo-datas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Botões */
+
+.pagina-calculadoras .btn-calc {
+    min-height: 48px;
+    padding: 14px 22px;
+
+    background: #285c48;
+    border: 1px solid #285c48;
+    border-radius: 8px;
+
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.pagina-calculadoras .btn-calc:hover {
+    background: #1d4636;
+}
+
+/* Resultados */
+
+.pagina-calculadoras .resultado-box {
+    margin-top: 24px;
+    padding: 22px;
+
+    background: #edf7f0;
+    border-left: 4px solid #367557;
+    border-radius: 8px;
+
+    color: #234b3b;
+    overflow-wrap: anywhere;
+}
+
+.pagina-calculadoras .resultado-box h3 {
+    margin: 0 0 18px;
+
+    color: #193f32;
+    font-size: 1.2rem;
+}
+
+.pagina-calculadoras .resultado-box dl {
+    margin: 0 0 20px;
+}
+
+.pagina-calculadoras .resultado-box dl > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 12px 0;
+    border-bottom: 1px solid #d4e3d9;
+}
+
+.pagina-calculadoras .resultado-box dt {
+    line-height: 1.6;
+}
+
+.pagina-calculadoras .resultado-box dd {
+    margin: 0;
+
+    font-weight: 700;
+    text-align: right;
+    line-height: 1.6;
+}
+
+.pagina-calculadoras .resultado-box .linha-total {
+    color: #193f32;
+    font-size: 1.1rem;
+}
+
+.pagina-calculadoras .resultado-box p {
+    margin: 12px 0 0;
+
+    color: #52635a;
+    font-size: 0.95rem;
+}
+
+/* Mensagens de erro */
+
+.pagina-calculadoras .erro-calculadora {
+    margin-top: 18px;
+    padding: 14px;
+
+    background: #fff0ee;
+    border-left: 4px solid #a32c22;
+    border-radius: 6px;
+
+    color: #86241c;
+}
+
+/* Avisos e explicações */
+
+.pagina-calculadoras .aviso-calculadora {
+    margin: 22px 0;
+    padding: 18px;
+
+    background: #edf3ef;
+    border: 1px solid #d7e2da;
+    border-radius: 9px;
+
+    color: #52635a;
+    font-size: 0.95rem;
+}
+
+.pagina-calculadoras .aviso-calculadora p {
+    margin: 0 0 12px;
+}
+
+.pagina-calculadoras .aviso-calculadora p:last-child {
+    margin-bottom: 0;
+}
+
+/* Navegação por teclado */
+
+.pagina-calculadoras main :focus-visible {
+    outline: 3px solid #367557;
+    outline-offset: 4px;
+}
+
+/* Elementos ocultos */
+
+.pagina-calculadoras [hidden] {
+    display: none !important;
+}
+
+/* ==========================================
+   CELULARES
+   ========================================== */
+
+@media (max-width: 640px) {
+    .pagina-calculadoras main {
+        width: calc(100% - 24px);
+        padding-top: 24px;
+    }
+
+    .pagina-calculadoras .conteudo-artigo {
+        padding: 24px 16px;
+    }
+
+    .pagina-calculadoras .box-calculadora {
+        padding: 20px 16px;
+    }
+
+    .pagina-calculadoras .grupo-datas {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .pagina-calculadoras .btn-calc {
+        width: 100%;
+    }
+
+    .pagina-calculadoras .resultado-box {
+        padding: 18px;
+    }
+
+    .pagina-calculadoras .resultado-box dl > div {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .pagina-calculadoras .resultado-box dd {
+        text-align: left;
+    }
+}

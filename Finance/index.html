@@ -1,72 +1,299 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finanças Blindadas | Home</title>
+    <meta name="description"
+        content="Conteúdos de educação financeira, hábitos, renda fixa, renda variável e calculadoras para entender melhor seu dinheiro.">
+    <title>DuFerreira | Investe | Home</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
     <header>
-        <div class="logo">
-            <h1>Finanças em dia</h1>
-        </div>
-        <nav>
-          <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="comportamento.html">Mentalidade & Hábitos</a></li>
-                <li><a href="reserva.html">Reserva & Carteira</a></li>
-                <li><a href="calculadoras.html">Ferramentas & Calculadoras</a></li>
-                <li><a href="investimentos.html">Longo Prazo & Ações</a></li>
-                <li><a href="cripto.html">Criptomoedas</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
+        <a class="logo" href="index.html" aria-label="DuFerreira | Investe — Home">
+            DuFerreira | Investe
+        </a>
+
+        <nav aria-label="Menu principal">
+            <ul class="menu-principal">
+                <li>
+                    <a href="index.html" aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="comportamento.html">Hábitos &amp; Mentalidade</a>
+                </li>
+                <li>
+                    <a href="educacao-financeira.html">Educação Financeira</a>
+                </li>
+                <li>
+                    <a href="renda-fixa.html">Renda Fixa</a>
+                </li>
+                <li>
+                    <a href="renda-variavel.html">Renda Variável</a>
+                </li>
+                <li>
+                    <details class="menu-ferramentas">
+                        <summary>Ferramentas</summary>
+
+                        <ul class="submenu">
+                            <li>
+                                <a href="calculadoras.html">Calculadoras</a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <a href="contatos.html">Contatos</a>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <main id="conteudo">
+        <section class="boas-vindas" aria-labelledby="titulo-home">
+            <span class="etiqueta">Educação financeira para a vida real</span>
 
-    <main>
-        <section class="boas-vindas">
-            <h2>A Construção da Verdadeira Previsibilidade Financeira</h2>
-            <p>Seja bem-vindo ao Finanças Blindadas. Nosso blog nasceu com uma missão clara: provar que a sua aposentadoria e paz de espírito dependem de hábitos comportamentais e do poder dos juros compostos no Tesouro Selic, e não do INSS. Aqui você aprenderá a dominar a Regra dos 3 P's, a estancar o sangramento invisível das assinaturas mensais recorrentes, a criar sua reserva de segurança em Renda Fixa e a migrar progressivamente para uma carteira global diversificada em Ações, Criptomoedas, Dólar e Ouro. Assuma o controle hoje.</p>
-        </section>
+            <h1 id="titulo-home">
+                Entenda seu dinheiro e construa seus próximos passos.
+            </h1>
 
-        <section class="destaques">
-            <h2>Pilares</h2>
-            <div class="grid-destaques">
+            <p>
+                O DuFerreira | Investe é um blog para quem quer aprender a organizar
+                as contas, compreender os investimentos e tomar decisões
+                financeiras com mais consciência.
+            </p>
 
-                <article class="card">
-                    <a href="comportamento.html">
-                        <img src="https://picsum.photos" alt="Psicologia do Consumo">
-                    </a>
-                    <h3>Mentalidade e Psicologia Comportamental</h3>
-                    <p>Aprenda a aplicar a Regra dos 3 P's, evite compras por impulso usando o método dos 3 dias e descubra como as assinaturas mensais estão destruindo seu patrimônio no longo prazo.</p>
-                </article>
+            <p>
+                Aqui você encontra explicações sobre hábitos de consumo,
+                orçamento, reserva de emergência, inflação, renda fixa e
+                renda variável. As calculadoras ajudam a explorar cenários
+                e visualizar os resultados das simulações.
+            </p>
 
-                <article class="card">
-                    <a href="reserva.html">
-                        <img src="https://picsum.photos" alt="Reserva e Alocação">
-                    </a>
-                    <h3>Da Reserva à Carteira Global</h3>
-                    <p>Entenda o passo a passo para erguer seu colchão de Renda Fixa e, com segurança, começar a montar uma carteira resiliente diversificada com ações, ouro, moedas e criptoativos.</p>
-                </article>
+            <div class="acoes-home">
+                <a class="botao" href="educacao-financeira.html">
+                    Começar a aprender
+                </a>
 
-                <article class="card">
-                    <a href="calculadoras.html">
-                        <img src="https://picsum.photos" alt="Simuladores Financeiros">
-                    </a>
-                    <h3>Simuladores Interativos</h3>
-                    <p>Utilize nossa calculadora de Juros Compostos no Tesouro Selic para projetar sua independência financeira real e use nosso simulador trabalhista para calcular direitos rescisórios.</p>
-                </article>
-
+                <a class="botao botao-secundario" href="calculadoras.html">
+                    Conhecer as calculadoras
+                </a>
             </div>
         </section>
+
+        <section class="destaques" aria-labelledby="titulo-destaques">
+            <div class="cabecalho-secao">
+                <span class="etiqueta">Explore os assuntos</span>
+                <h2 id="titulo-destaques">Conteúdos em destaque</h2>
+                <p>
+                    Escolha um tema para começar ou aprofundar seus conhecimentos.
+                </p>
+            </div>
+
+            <div class="grid-destaques">
+                <article class="card">
+                    <a class="card-imagem" href="comportamento.html">
+                        <img src="imagens/mentalidade.jpg"
+                            alt="Conheça os conteúdos sobre mentalidade e hábitos financeiros" width="640" height="400"
+                            loading="lazy">
+                    </a>
+
+                    <div class="card-conteudo">
+                        <span class="categoria">Hábitos e planejamento</span>
+
+                        <h3>
+                            <a href="comportamento.html">
+                                Mentalidade &amp; Hábitos
+                            </a>
+                        </h3>
+
+                        <p>
+                            Reflita sobre suas escolhas de consumo e conheça
+                            formas de organizar a rotina, planejar compras e
+                            acompanhar seus objetivos.
+                        </p>
+
+                        <a class="link-card" href="comportamento.html">
+                            Explorar mentalidade e hábitos
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <a class="card-imagem" href="educacao-financeira.html">
+                        <img src="imagens/educacao-financeira.jpg" alt="Conheça os conteúdos de educação financeira"
+                            width="640" height="400" loading="lazy">
+                    </a>
+
+                    <div class="card-conteudo">
+                        <span class="categoria">Conceitos do dia a dia</span>
+
+                        <h3>
+                            <a href="educacao-financeira.html">
+                                Educação Financeira
+                            </a>
+                            1
+                        </h3>
+
+                        <p>
+                            Entenda orçamento, inflação, FGTS, juros e reserva
+                            de emergência por meio de explicações e exemplos
+                            próximos da sua realidade.
+                        </p>
+
+                        <a class="link-card" href="educacao-financeira.html">
+                            Explorar educação financeira
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <a class="card-imagem" href="renda-fixa.html">
+                        <img src="imagens/renda-fixa.jpg" alt="Conheça os conteúdos sobre investimentos de renda fixa"
+                            width="640" height="400" loading="lazy">
+                    </a>
+
+                    <div class="card-conteudo">
+                        <span class="categoria">Investimentos</span>
+
+                        <h3>
+                            <a href="renda-fixa.html">Renda Fixa</a>
+                        </h3>
+
+                        <p>
+                            Conheça Tesouro Selic, Tesouro IPCA+, CDB e outros
+                            investimentos. Aprenda a observar prazos,
+                            liquidez, riscos e formas de remuneração.
+                        </p>
+
+                        <a class="link-card" href="renda-fixa.html">
+                            Explorar renda fixa
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <a class="card-imagem" href="renda-variavel.html">
+                        <img src="imagens/renda-variavel.jpg"
+                            alt="Conheça os conteúdos sobre investimentos de renda variável" width="640" height="400"
+                            loading="lazy">
+                    </a>
+
+                    <div class="card-conteudo">
+                        <span class="categoria">Investimentos</span>
+
+                        <h3>
+                            <a href="renda-variavel.html">Renda Variável</a>
+                        </h3>
+
+                        <p>
+                            Explore os conceitos de ações, fundos imobiliários,
+                            ETFs e diversificação, com atenção aos riscos
+                            e às possibilidades de perdas.
+                        </p>
+
+                        <a class="link-card" href="renda-variavel.html">
+                            Explorar renda variável
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <a class="card-imagem" href="calculadoras.html">
+                        <img src="imagens/calculadoras.jpg" alt="Acesse as calculadoras e os simuladores do blog"
+                            width="640" height="400" loading="lazy">
+                    </a>
+
+                    <div class="card-conteudo">
+                        <span class="categoria">Ferramentas</span>
+
+                        <h3>
+                            <a href="calculadoras.html">
+                                Calculadoras e Simuladores
+                            </a>
+                        </h3>
+
+                        <p>
+                            Faça simulações de juros compostos e estimativas
+                            trabalhistas. Confira as hipóteses e limitações
+                            apresentadas em cada ferramenta.
+                        </p>
+
+                        <a class="link-card" href="calculadoras.html">
+                            Acessar calculadoras
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="trilha" aria-labelledby="titulo-trilha">
+            <div class="cabecalho-secao">
+                <span class="etiqueta">Um assunto de cada vez</span>
+                <h2 id="titulo-trilha">Não sabe por onde começar?</h2>
+                <p>
+                    Use esta sequência como roteiro de leitura pelo blog.
+                </p>
+            </div>
+
+            <ol class="etapas">
+                <li>
+                    <span class="numero-etapa" aria-hidden="true">01</span>
+                    <h3>Observe seus hábitos</h3>
+                    <p>
+                        Comece pelas suas escolhas de consumo e pela
+                        organização da rotina.
+                    </p>
+                    <a href="comportamento.html">Conhecer os hábitos</a>
+                </li>
+
+                <li>
+                    <span class="numero-etapa" aria-hidden="true">02</span>
+                    <h3>Entenda os conceitos</h3>
+                    <p>
+                        Explore os conteúdos de orçamento, reserva e
+                        termos financeiros.
+                    </p>
+                    <a href="educacao-financeira.html">Estudar os conceitos</a>
+                </li>
+
+                <li>
+                    <span class="numero-etapa" aria-hidden="true">03</span>
+                    <h3>Conheça os investimentos</h3>
+                    <p>
+                        Continue pelos artigos que explicam os produtos,
+                        seus prazos e riscos.
+                    </p>
+                    <a href="renda-fixa.html">Conhecer a renda fixa</a>
+                </li>
+            </ol>
+        </section>
+
+        <aside class="aviso-educativo" aria-label="Aviso sobre o conteúdo">
+            <h2>Informação para aprender e comparar</h2>
+            <p>
+                O conteúdo do blog tem finalidade educativa e não constitui
+                recomendação individual de investimento. As calculadoras
+                apresentam estimativas e não substituem extratos, documentos
+                oficiais ou análise profissional.
+            </p>
+        </aside>
     </main>
 
     <footer>
-        <p>&copy; 2026 com suas finanças em dia</p>
+        <p class="nome-rodape">DuFerreira | Investe</p>
+        <p>Educação financeira com linguagem simples.</p>
+        <p>&copy; 2026 DuFerreira | Investe</p>
     </footer>
-
 </body>
+
 </html>

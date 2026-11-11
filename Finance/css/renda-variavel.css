@@ -1,0 +1,1033 @@
+/* 
+   DUFERREIRA | INVESTE
+   RENDA VARIÁVEL — PÁGINA E ARTIGOS
+    */
+
+.pagina-renda-variavel,
+.artigo-renda-variavel {
+    --rv-verde: #285c48;
+    --rv-verde-escuro: #193f32;
+    --rv-texto: #35473e;
+    --rv-texto-suave: #5b6861;
+    --rv-borda: #dce5df;
+    --rv-fundo: #f4f6f8;
+    --rv-fundo-suave: #eaf5ee;
+    --rv-branco: #ffffff;
+
+    background-color: var(--rv-fundo);
+    color: var(--rv-texto);
+}
+
+.pagina-renda-variavel main,
+.pagina-renda-variavel main *,
+.artigo-renda-variavel main,
+.artigo-renda-variavel main * {
+    box-sizing: border-box;
+}
+
+/* caminhos */
+
+.pagina-renda-variavel .caminho-pagina,
+.artigo-renda-variavel .caminho-pagina {
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.pagina-renda-variavel .caminho-pagina ol,
+.artigo-renda-variavel .caminho-pagina ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.pagina-renda-variavel .caminho-pagina li,
+.artigo-renda-variavel .caminho-pagina li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-renda-variavel .caminho-pagina li + li::before,
+.artigo-renda-variavel .caminho-pagina li + li::before {
+    content: "/";
+    color: #7a8780;
+}
+
+.pagina-renda-variavel .caminho-pagina a,
+.artigo-renda-variavel .caminho-pagina a {
+    color: var(--rv-verde);
+    text-decoration: none;
+}
+
+.pagina-renda-variavel .caminho-pagina a:hover,
+.artigo-renda-variavel .caminho-pagina a:hover {
+    text-decoration: underline;
+}
+
+.pagina-renda-variavel .caminho-pagina [aria-current="page"],
+.artigo-renda-variavel .caminho-pagina [aria-current="page"] {
+    color: var(--rv-texto-suave);
+}
+
+/* Foco de teclado */
+
+.pagina-renda-variavel main a:focus-visible,
+.pagina-renda-variavel main summary:focus-visible,
+.pagina-renda-variavel .rv-tabela-container:focus-visible,
+.artigo-renda-variavel main a:focus-visible,
+.artigo-renda-variavel main summary:focus-visible {
+    outline: 3px solid #367557;
+    outline-offset: 5px;
+}
+
+/* 
+   PÁGINA PRINCIPAL
+   */
+
+.pagina-renda-variavel main {
+    display: block;
+
+    width: min(1180px, calc(100% - 40px));
+    max-width: 1180px;
+
+    margin: 0 auto;
+    padding: 32px 0 64px;
+}
+
+.pagina-renda-variavel main h2 {
+    margin: 0 0 16px;
+
+    color: var(--rv-verde-escuro);
+    font-size: clamp(1.45rem, 2.3vw, 1.9rem);
+    line-height: 1.3;
+}
+
+.pagina-renda-variavel .rv-etiqueta {
+    display: block;
+
+    margin: 0 0 16px;
+    padding: 0;
+
+    color: var(--rv-verde);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+/* Apresentação */
+
+.pagina-renda-variavel .rv-hero {
+    display: block;
+
+    margin: 0 0 40px;
+    padding: clamp(28px, 5vw, 60px);
+
+    background: var(--rv-fundo-suave);
+    border: 1px solid #d7e5dc;
+    border-radius: 24px;
+}
+
+.pagina-renda-variavel .rv-hero h1 {
+    max-width: 950px;
+    margin: 0 0 20px;
+
+    color: var(--rv-verde-escuro);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.pagina-renda-variavel .rv-introducao {
+    max-width: 850px;
+    margin: 0;
+
+    color: #52635b;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    line-height: 1.8;
+}
+
+/* Botões da página principal */
+
+.pagina-renda-variavel .rv-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+
+    margin: 26px 0 0;
+}
+
+.pagina-renda-variavel .rv-botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 13px 22px;
+
+    background: var(--rv-verde);
+    border: 1px solid var(--rv-verde);
+    border-radius: 10px;
+
+    color: var(--rv-branco);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.pagina-renda-variavel .rv-botao:hover {
+    background: #1d4636;
+    border-color: #1d4636;
+    color: var(--rv-branco);
+}
+
+.pagina-renda-variavel .rv-botao-secundario {
+    background: transparent;
+    color: var(--rv-verde);
+}
+
+.pagina-renda-variavel .rv-botao-secundario:hover {
+    background: #dcece2;
+    color: var(--rv-verde-escuro);
+}
+
+/* Blocos de conteúdo */
+
+.pagina-renda-variavel .rv-bloco {
+    display: block;
+
+    margin: 0 0 28px;
+    padding: clamp(24px, 3vw, 36px);
+
+    background: var(--rv-branco);
+    border: 1px solid var(--rv-borda);
+    border-radius: 18px;
+}
+
+.pagina-renda-variavel .rv-bloco h3 {
+    margin: 26px 0 10px;
+
+    color: #234b3b;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.pagina-renda-variavel .rv-bloco p {
+    margin: 0 0 16px;
+    line-height: 1.85;
+}
+
+.pagina-renda-variavel .rv-bloco > :last-child {
+    margin-bottom: 0;
+}
+
+.pagina-renda-variavel .rv-bloco ul,
+.pagina-renda-variavel .rv-bloco ol {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+
+.pagina-renda-variavel .rv-bloco li {
+    margin-bottom: 12px;
+    line-height: 1.75;
+}
+
+.pagina-renda-variavel .rv-bloco blockquote {
+    margin: 24px 0 0;
+    padding: 18px 22px;
+
+    background: #f0f7f2;
+    border: 0;
+    border-left: 4px solid #367557;
+    border-radius: 0 10px 10px 0;
+
+    color: #28513f;
+    line-height: 1.8;
+}
+
+/* Seção de artigos */
+
+.pagina-renda-variavel .rv-assuntos {
+    display: block;
+
+    margin: 48px 0;
+    padding: 0;
+}
+
+.pagina-renda-variavel .rv-assuntos > p {
+    max-width: 850px;
+    margin: 0 0 28px;
+
+    color: var(--rv-texto-suave);
+    line-height: 1.8;
+}
+
+.pagina-renda-variavel #assuntos,
+.pagina-renda-variavel #comparacao {
+    scroll-margin-top: 110px;
+}
+
+/* Grade de cartões */
+
+.pagina-renda-variavel .rv-grade {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-renda-variavel .rv-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    min-width: 0;
+    min-height: 300px;
+
+    margin: 0;
+    padding: 28px;
+
+    background: var(--rv-branco);
+    border: 1px solid var(--rv-borda);
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(25, 63, 50, 0.04);
+    overflow-wrap: anywhere;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.pagina-renda-variavel .rv-card:hover {
+    transform: translateY(-4px);
+    border-color: #9bbca8;
+    box-shadow: 0 12px 28px rgba(25, 63, 50, 0.09);
+}
+
+.pagina-renda-variavel .rv-card h3 {
+    margin: 0 0 14px;
+
+    color: var(--rv-verde-escuro);
+    font-size: 1.3rem;
+    line-height: 1.35;
+}
+
+.pagina-renda-variavel .rv-card p {
+    flex: 1;
+
+    margin: 0 0 24px;
+
+    color: var(--rv-texto-suave);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.pagina-renda-variavel .rv-card > a {
+    display: inline-block;
+    margin: auto 0 0;
+
+    color: var(--rv-verde);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.6;
+
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.pagina-renda-variavel .rv-card > a:hover {
+    color: #173b2d;
+}
+
+/* Tabela da página principal */
+
+.pagina-renda-variavel .rv-tabela-container {
+    width: 100%;
+    margin: 24px 0;
+    overflow-x: auto;
+
+    border: 1px solid var(--rv-borda);
+    border-radius: 12px;
+}
+
+.pagina-renda-variavel .rv-tabela {
+    width: 100%;
+    min-width: 650px;
+
+    margin: 0;
+    border-collapse: collapse;
+
+    background: var(--rv-branco);
+    font-size: 0.95rem;
+}
+
+.pagina-renda-variavel .rv-tabela caption {
+    padding: 16px;
+
+    color: var(--rv-texto-suave);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.pagina-renda-variavel .rv-tabela th,
+.pagina-renda-variavel .rv-tabela td {
+    padding: 16px;
+
+    border-bottom: 1px solid #e4ebe6;
+
+    line-height: 1.65;
+    text-align: left;
+    vertical-align: top;
+}
+
+.pagina-renda-variavel .rv-tabela thead th {
+    background: var(--rv-fundo-suave);
+    color: var(--rv-verde-escuro);
+}
+
+.pagina-renda-variavel .rv-tabela tbody th {
+    color: #28513f;
+}
+
+.pagina-renda-variavel .rv-tabela tbody tr:last-child th,
+.pagina-renda-variavel .rv-tabela tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Exemplo da página principal */
+
+.pagina-renda-variavel .rv-exemplo {
+    margin: 22px 0;
+    padding: 20px 24px;
+
+    background: #f0f7f2;
+    border: 1px solid var(--rv-borda);
+    border-radius: 12px;
+}
+
+.pagina-renda-variavel .rv-exemplo p {
+    margin: 0 0 10px;
+    overflow-wrap: anywhere;
+}
+
+.pagina-renda-variavel .rv-exemplo p:last-child {
+    margin-bottom: 0;
+}
+
+/* Perguntas da página principal */
+
+.pagina-renda-variavel .rv-pergunta {
+    margin: 12px 0;
+    padding: 18px 20px;
+
+    background: #f7faf8;
+    border: 1px solid var(--rv-borda);
+    border-radius: 12px;
+}
+
+.pagina-renda-variavel .rv-pergunta summary {
+    color: #234b3b;
+    font-weight: 700;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.pagina-renda-variavel .rv-pergunta p {
+    margin: 14px 0 0;
+
+    color: var(--rv-texto-suave);
+    line-height: 1.8;
+}
+
+/* Aviso da página principal */
+
+.pagina-renda-variavel .rv-aviso {
+    margin: 32px 0 0;
+    padding: 26px;
+
+    background: #edf4ef;
+    border: 1px solid #d7e5dc;
+    border-radius: 16px;
+}
+
+.pagina-renda-variavel .rv-aviso h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.pagina-renda-variavel .rv-aviso p {
+    margin: 0;
+
+    color: #52635b;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   ARTIGOS DE RENDA VARIÁVEL
+   ========================================== */
+
+.artigo-renda-variavel main {
+    display: block;
+
+    width: min(1000px, calc(100% - 40px));
+    max-width: 1000px;
+
+    margin: 0 auto;
+    padding: 32px 0 64px;
+}
+
+/* Área principal do artigo */
+
+.artigo-renda-variavel .conteudo-artigo {
+    display: block;
+
+    width: 100%;
+    max-width: none;
+
+    margin: 0;
+    padding: clamp(24px, 5vw, 56px);
+
+    background: var(--rv-branco);
+    border: 1px solid var(--rv-borda);
+    border-radius: 22px;
+
+    box-shadow: 0 8px 30px rgba(25, 63, 50, 0.04);
+    overflow-wrap: anywhere;
+}
+
+/* Identificação e título */
+
+.artigo-renda-variavel .conteudo-artigo > .etiqueta {
+    display: inline-block;
+
+    margin: 0 0 18px;
+    padding: 7px 12px;
+
+    background: var(--rv-fundo-suave);
+    border-radius: 6px;
+
+    color: var(--rv-verde);
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.artigo-renda-variavel .conteudo-artigo h1 {
+    max-width: 850px;
+    margin: 0 0 24px;
+
+    color: var(--rv-verde-escuro);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+}
+
+.artigo-renda-variavel .conteudo-artigo > .introducao {
+    max-width: none;
+    margin: 0 0 32px;
+
+    color: var(--rv-texto-suave);
+    font-size: 1.15rem;
+    line-height: 1.85;
+}
+
+/* Links */
+
+.artigo-renda-variavel .conteudo-artigo a {
+    color: var(--rv-verde);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.artigo-renda-variavel .conteudo-artigo a:hover {
+    color: #173b2d;
+}
+
+/* Sumário */
+
+.artigo-renda-variavel .sumario {
+    display: block;
+
+    margin: 32px 0 40px;
+    padding: 26px;
+
+    background: #f3f8f5;
+    border: 1px solid #d7e5dc;
+    border-radius: 14px;
+}
+
+.artigo-renda-variavel .sumario h2 {
+    margin: 0 0 18px;
+
+    color: var(--rv-verde-escuro);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.artigo-renda-variavel .sumario ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 28px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.artigo-renda-variavel .sumario li {
+    min-width: 0;
+
+    margin: 0;
+    padding: 0;
+
+    line-height: 1.6;
+}
+
+.artigo-renda-variavel .sumario a {
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.artigo-renda-variavel .sumario a:hover {
+    text-decoration: underline;
+}
+
+/* Seções */
+
+.artigo-renda-variavel .conteudo-artigo .topico-bloco {
+    display: block;
+
+    margin: 0;
+    padding: 32px 0;
+
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #e4ebe6;
+    border-radius: 0;
+
+    box-shadow: none;
+    scroll-margin-top: 110px;
+}
+
+.artigo-renda-variavel .topico-bloco h2 {
+    margin: 0 0 20px;
+
+    color: var(--rv-verde-escuro);
+    font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+    line-height: 1.35;
+}
+
+.artigo-renda-variavel .topico-bloco h3 {
+    margin: 28px 0 12px;
+
+    color: #234b3b;
+    font-size: 1.15rem;
+    line-height: 1.45;
+}
+
+.artigo-renda-variavel .topico-bloco p {
+    margin: 0 0 18px;
+
+    color: var(--rv-texto);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.artigo-renda-variavel .topico-bloco > :last-child {
+    margin-bottom: 0;
+}
+
+/* Listas */
+
+.artigo-renda-variavel .topico-bloco ul,
+.artigo-renda-variavel .topico-bloco ol {
+    margin: 18px 0;
+    padding-left: 24px;
+}
+
+.artigo-renda-variavel .topico-bloco li {
+    margin: 0 0 12px;
+    padding-left: 4px;
+
+    font-size: 1.02rem;
+    line-height: 1.8;
+}
+
+.artigo-renda-variavel .topico-bloco li::marker {
+    color: var(--rv-verde);
+}
+
+/* Destaques */
+
+.artigo-renda-variavel .topico-bloco blockquote {
+    margin: 26px 0;
+    padding: 20px 24px;
+
+    background: var(--rv-fundo-suave);
+    border: 0;
+    border-left: 4px solid #367557;
+    border-radius: 0 12px 12px 0;
+
+    color: #28513f;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Exemplos e cálculos */
+
+.artigo-renda-variavel .exemplo-conta {
+    margin: 24px 0;
+    padding: 22px 24px;
+
+    background: #f2f6f3;
+    border: 1px solid var(--rv-borda);
+    border-radius: 12px;
+}
+
+.artigo-renda-variavel .exemplo-conta p {
+    margin: 0 0 12px;
+
+    color: #234b3b;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.artigo-renda-variavel .exemplo-conta p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tabelas dos artigos */
+
+.artigo-renda-variavel .tabela-container {
+    display: block;
+    width: 100%;
+
+    margin: 24px 0;
+    overflow-x: auto;
+
+    border: 1px solid var(--rv-borda);
+    border-radius: 12px;
+}
+
+.artigo-renda-variavel .tabela-financeira {
+    width: 100%;
+    min-width: 560px;
+
+    margin: 0;
+    border-collapse: collapse;
+
+    background: var(--rv-branco);
+    font-size: 0.95rem;
+}
+
+.artigo-renda-variavel .tabela-financeira caption {
+    padding: 16px;
+
+    color: var(--rv-texto-suave);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.artigo-renda-variavel .tabela-financeira th,
+.artigo-renda-variavel .tabela-financeira td {
+    padding: 16px;
+
+    border-bottom: 1px solid #e4ebe6;
+
+    line-height: 1.75;
+    text-align: left;
+    vertical-align: top;
+}
+
+.artigo-renda-variavel .tabela-financeira thead th {
+    background: var(--rv-fundo-suave);
+    color: var(--rv-verde-escuro);
+}
+
+.artigo-renda-variavel .tabela-financeira tbody th {
+    color: #28513f;
+    font-weight: 700;
+}
+
+.artigo-renda-variavel .tabela-financeira tbody tr:last-child th,
+.artigo-renda-variavel .tabela-financeira tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Perguntas dos artigos */
+
+.artigo-renda-variavel .pergunta-frequente {
+    margin: 14px 0;
+    padding: 18px 20px;
+
+    background: #f7faf8;
+    border: 1px solid var(--rv-borda);
+    border-radius: 12px;
+}
+
+.artigo-renda-variavel .pergunta-frequente summary {
+    color: #234b3b;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.65;
+
+    cursor: pointer;
+}
+
+.artigo-renda-variavel .pergunta-frequente[open] summary {
+    margin-bottom: 14px;
+}
+
+.artigo-renda-variavel .pergunta-frequente p {
+    margin: 0;
+
+    color: var(--rv-texto-suave);
+    font-size: 1rem;
+    line-height: 1.85;
+}
+
+/* Botões dos artigos */
+
+.artigo-renda-variavel .acoes-home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+
+    margin: 32px 0 0;
+    padding: 0;
+
+    border: 0;
+}
+
+.artigo-renda-variavel .acoes-home .botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 13px 22px;
+
+    background: var(--rv-verde);
+    border: 1px solid var(--rv-verde);
+    border-radius: 10px;
+
+    color: var(--rv-branco);
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.artigo-renda-variavel .acoes-home .botao:hover {
+    background: #1d4636;
+    border-color: #1d4636;
+    color: var(--rv-branco);
+}
+
+.artigo-renda-variavel .acoes-home .botao-secundario {
+    background: transparent;
+    color: var(--rv-verde);
+}
+
+.artigo-renda-variavel .acoes-home .botao-secundario:hover {
+    background: var(--rv-fundo-suave);
+    color: var(--rv-verde-escuro);
+}
+
+/* Aviso dos artigos */
+
+.artigo-renda-variavel .aviso-educativo {
+    display: block;
+
+    margin: 28px 0 0;
+    padding: 26px;
+
+    background: #edf4ef;
+    border: 1px solid #d7e5dc;
+    border-radius: 16px;
+}
+
+.artigo-renda-variavel .aviso-educativo h2 {
+    margin: 0 0 12px;
+
+    color: var(--rv-verde-escuro);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.artigo-renda-variavel .aviso-educativo p {
+    margin: 0;
+
+    color: #52635b;
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+
+/* TELAS INTERMEDIÁRIAS */
+
+@media (max-width: 1000px) {
+    .pagina-renda-variavel .rv-grade {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/*CELULARES */
+
+@media (max-width: 640px) {
+    /* Página principal */
+
+    .pagina-renda-variavel main {
+        width: calc(100% - 32px);
+        padding: 24px 0 40px;
+    }
+
+    .pagina-renda-variavel .rv-hero {
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    .pagina-renda-variavel .rv-hero h1 {
+        font-size: 2rem;
+    }
+
+    .pagina-renda-variavel .rv-acoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pagina-renda-variavel .rv-botao {
+        width: 100%;
+    }
+
+    .pagina-renda-variavel .rv-bloco {
+        padding: 24px 20px;
+    }
+
+    .pagina-renda-variavel .rv-grade {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .pagina-renda-variavel .rv-card {
+        min-height: 0;
+        padding: 24px;
+    }
+
+    .pagina-renda-variavel .rv-exemplo {
+        padding: 18px;
+    }
+
+    .pagina-renda-variavel .rv-aviso {
+        padding: 24px 20px;
+    }
+
+    /* Artigos */
+
+    .artigo-renda-variavel main {
+        width: calc(100% - 24px);
+        padding: 24px 0 40px;
+    }
+
+    .artigo-renda-variavel .caminho-pagina ol {
+        font-size: 0.8rem;
+    }
+
+    .artigo-renda-variavel .conteudo-artigo {
+        padding: 28px 20px;
+        border-radius: 16px;
+    }
+
+    .artigo-renda-variavel .conteudo-artigo h1 {
+        font-size: 2rem;
+    }
+
+    .artigo-renda-variavel .conteudo-artigo > .introducao {
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .artigo-renda-variavel .sumario {
+        padding: 20px;
+    }
+
+    .artigo-renda-variavel .sumario ul {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .artigo-renda-variavel .conteudo-artigo .topico-bloco {
+        padding: 28px 0;
+    }
+
+    .artigo-renda-variavel .topico-bloco p,
+    .artigo-renda-variavel .topico-bloco li {
+        font-size: 1rem;
+    }
+
+    .artigo-renda-variavel .topico-bloco blockquote {
+        padding: 18px;
+    }
+
+    .artigo-renda-variavel .exemplo-conta {
+        padding: 18px;
+    }
+
+    .artigo-renda-variavel .acoes-home {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .artigo-renda-variavel .acoes-home .botao {
+        width: 100%;
+    }
+
+    .artigo-renda-variavel .aviso-educativo {
+        padding: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina-renda-variavel .rv-card,
+    .pagina-renda-variavel .rv-botao,
+    .artigo-renda-variavel .acoes-home .botao {
+        transition: none;
+    }
+
+    .pagina-renda-variavel .rv-card:hover {
+        transform: none;
+    }
+}

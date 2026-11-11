@@ -1,62 +1,613 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentalidade Financeira | Finanças Blindadas</title>
+
+    <meta name="description"
+        content="Aprenda a observar seus hábitos de consumo, planejar compras e construir uma rotina financeira com exemplos do dia a dia.">
+
+    <title>DuFerreira | Investe | Hábitos &amp; Mentalidade</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <a class="pular-conteudo" href="#conteudo">
+        Pular para o conteúdo
+    </a>
 
     <header>
-        <div class="logo">
-            <h1>Finanças em dia</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="comportamento.html">Mentalidade & Hábitos</a></li>
-                <li><a href="reserva.html">Reserva & Carteira</a></li>
-                <li><a href="calculadoras.html">Ferramentas & Calculadoras</a></li>
-                <li><a href="investimentos.html">Longo Prazo & Ações</a></li>
-                <li><a href="cripto.html">Criptomoedas</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
+        <a class="logo" href="index.html" aria-label="DuFerreira | Investe — Home">
+            DuFerreira | Investe
+        </a>
+
+        <nav aria-label="Menu principal">
+            <ul class="menu-principal">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="comportamento.html" aria-current="page">
+                        Hábitos &amp; Mentalidade
+                    </a>
+                </li>
+
+                <li>
+                    <a href="educacao-financeira.html">
+                        Educação Financeira
+                    </a>
+                </li>
+
+                <li>
+                    <a href="renda-fixa.html">Renda Fixa</a>
+                </li>
+
+                <li>
+                    <a href="renda-variavel.html">Renda Variável</a>
+                </li>
+
+                <li>
+                    <details class="menu-ferramentas">
+                        <summary>Ferramentas</summary>
+
+                        <ul class="submenu">
+                            <li>
+                                <a href="calculadoras.html">
+                                    Calculadoras
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <a href="contatos.html">Contatos</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-
-    <main>
+    <main id="conteudo">
         <article class="conteudo-artigo">
-            <h2>Psicologia do Consumo: O Combustível para sua Reserva</h2>
-            <p class="introducao">Investir não é sobre quanto você ganha, mas sim sobre o comportamento e os gatilhos que você domina no seu cotidiano.</p>
+            <span class="etiqueta">Comportamento e organização</span>
 
-            <section class="topico-bloco">
-                <h3>A Regra dos 3 P's e o Filtro de Impulso</h3>
-                <p>Antes de passar o cartão em qualquer produto não essencial, faça três perguntas fundamentais:</p>
+            <h1>Hábitos &amp; Mentalidade</h1>
+
+            <p class="introducao">
+                Cuidar do dinheiro envolve conhecer sua realidade e perceber
+                como as decisões do dia a dia afetam seus planos. Nesta página,
+                você encontra sugestões para observar o consumo, organizar
+                compromissos e construir uma rotina financeira possível
+                de manter.
+            </p>
+
+            <nav class="sumario" aria-label="Assuntos desta página">
+                <h2>Nesta página</h2>
+
                 <ul>
-                    <li><strong>Preciso?</strong> Eu realmente necessito disso para viver ou trabalhar agora?</li>
-                    <li><strong>Posso?</strong> Eu tenho esse dinheiro à vista sem prejudicar meus investimentos?</li>
-                    <li><strong>Prioridade?</strong> Esse gasto está alinhado com meus objetivos de longo prazo?</li>
+                    <li>
+                        <a href="#relacao-dinheiro">
+                            Sua relação com o dinheiro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#necessidades-desejos">
+                            Necessidades, desejos e prioridades
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#compras-impulso">
+                            Compras por impulso e os 3 P's
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#pequenos-gastos">
+                            Pequenos gastos e assinaturas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#metas">
+                            Metas que cabem na sua realidade
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#rotina">
+                            Uma rotina para acompanhar seu dinheiro
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#comparacao">
+                            Comparação social e consumo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#primeiros-passos">
+                            Primeiros passos
+                        </a>
+                    </li>
                 </ul>
-                <p>Se a resposta for "não" para qualquer um deles, dê preferência a outras prioridades. Para compras maiores, utilize a <strong>Regra dos 3 dias</strong>: espere 72 horas antes de concluir a compra. Isso elimina o pico de dopamina inicial e evita gastos puramente emocionais.</p>
+            </nav>
+
+            <section class="topico-bloco" id="relacao-dinheiro">
+                <h2>1. Entenda sua relação com o dinheiro</h2>
+
+                <p>
+                    Antes de definir o que mudar, observe como você usa o
+                    dinheiro. Algumas despesas são planejadas; outras aparecem
+                    por conveniência, pressa, costume ou vontade de aproveitar
+                    uma promoção.
+                </p>
+
+                <p>
+                    O objetivo dessa observação não é se culpar por cada compra.
+                    É reunir informações para decidir o que faz sentido manter
+                    e o que pode ser ajustado.
+                </p>
+
+                <h3>Exemplo do dia a dia</h3>
+
+                <p>
+                    Imagine uma pessoa que compra um lanche na saída do trabalho.
+                    Em alguns dias, ela está com fome e não levou comida.
+                    Em outros, compra apenas porque já se acostumou a parar
+                    no mesmo lugar.
+                </p>
+
+                <p>
+                    Ao perceber essa diferença, ela pode escolher em quais dias
+                    quer comprar o lanche e em quais prefere levar algo de casa.
+                    A decisão deixa de ser automática e passa a fazer parte
+                    do planejamento.
+                </p>
+
+                <blockquote>
+                    Conhecer seus hábitos ajuda a fazer escolhas mais
+                    conscientes, sem transformar toda despesa em motivo
+                    de culpa.
+                </blockquote>
+
+                <p>
+                    Também é importante reconhecer os limites da própria renda.
+                    Quando o dinheiro não cobre necessidades básicas, organizar
+                    os gastos ajuda a enxergar a situação, mas não resolve,
+                    sozinho, a falta de recursos.
+                </p>
+            </section>
+
+            <section class="topico-bloco" id="necessidades-desejos">
+                <h2>2. Diferencie necessidades, desejos e prioridades</h2>
+
+                <p>
+                    Separar os gastos por finalidade é uma forma de refletir
+                    sobre as escolhas. Uma necessidade está relacionada
+                    à manutenção da vida e da rotina; um desejo representa
+                    algo que você gostaria de ter ou fazer.
+                </p>
+
+                <p>
+                    Essa divisão depende do contexto. Um computador pode ser
+                    uma ferramenta de trabalho para uma pessoa e uma compra
+                    de lazer para outra. Por isso, não existe uma lista única
+                    que sirva para todos.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Necessidades:</strong> despesas como alimentação,
+                        moradia, saúde e transporte necessário.
+                    </li>
+                    <li>
+                        <strong>Desejos:</strong> compras e experiências que
+                        acrescentam conforto, diversão ou satisfação.
+                    </li>
+                    <li>
+                        <strong>Prioridades:</strong> o que precisa receber
+                        atenção primeiro, considerando os recursos disponíveis
+                        e os objetivos pessoais.
+                    </li>
+                </ul>
+
+                <h3>Exemplo do dia a dia</h3>
+
+                <p>
+                    Seu celular ainda funciona, mas um modelo novo chamou
+                    sua atenção. Ao mesmo tempo, você precisa consertar a
+                    bicicleta usada para ir ao trabalho.
+                </p>
+
+                <p>
+                    Nesse cenário, o conserto pode ter prioridade porque mantém
+                    seu transporte funcionando. A troca do celular pode continuar
+                    como um desejo, mas ser planejada para outro momento.
+                </p>
+
+                <p>
+                    Ter desejos não é um problema. A proposta é encontrar espaço
+                    para eles sem ignorar compromissos importantes.
+                </p>
+            </section>
+
+            <section class="topico-bloco" id="compras-impulso">
+                <h2>3. Compras por impulso e a regra dos 3 P's</h2>
+
+                <p>
+                    Uma promoção pode parecer uma oportunidade, mas o desconto
+                    não responde a todas as perguntas. Antes de comprar, vale
+                    avaliar a utilidade do produto, o preço total e o efeito
+                    dessa decisão nos compromissos do mês.
+                </p>
+
+                <p>
+                    A regra dos 3 P's funciona como um roteiro de reflexão:
+                    Preciso? Posso? É prioridade? A ideia é fazer uma pausa
+                    para pensar antes de concluir uma compra não planejada.
+                </p>
+
+                <h3>Preciso?</h3>
+
+                <p>
+                    Eu realmente necessito desse produto ou serviço agora?
+                    Ele resolve um problema da minha rotina ou a vontade
+                    apareceu somente depois de ver uma oferta?
+                </p>
+
+                <p>
+                    Verifique também se você já possui algo que cumpre a mesma
+                    função. Um desejo pode fazer parte do planejamento, mas
+                    não precisa ser tratado como uma necessidade urgente.
+                </p>
+
+                <h3>Posso?</h3>
+
+                <p>
+                    O valor cabe no meu orçamento sem comprometer alimentação,
+                    moradia, transporte, contas e outros compromissos?
+                    Se a compra for parcelada, consigo assumir as parcelas
+                    junto com as despesas que já tenho?
+                </p>
+
+                <p>
+                    Ter limite disponível no cartão não significa ter dinheiro
+                    disponível no orçamento. Considere o preço total e os
+                    pagamentos futuros, não apenas o valor de uma parcela.
+                </p>
+
+                <h3>É prioridade?</h3>
+
+                <p>
+                    Essa compra é mais importante do que os outros objetivos
+                    que tenho neste momento? Existe alguma conta, manutenção
+                    ou necessidade que deve receber atenção primeiro?
+                </p>
+
+                <p>
+                    A prioridade depende da sua realidade. Um equipamento
+                    necessário para trabalhar pode exigir uma decisão diferente
+                    de um produto comprado apenas para substituir outro
+                    que ainda funciona bem.
+                </p>
+
+                <blockquote>
+                    Antes de comprar, pergunte: preciso agora, posso pagar
+                    sem comprometer minhas contas e isso é prioridade?
+                </blockquote>
+
+                <h3>Exemplo do dia a dia</h3>
+
+                <p>
+                    Imagine que você encontrou um tênis por R$ 300, mas o seu
+                    ainda está em boas condições. Ao mesmo tempo, precisa
+                    consertar a bicicleta que utiliza para ir ao trabalho.
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Preciso?</strong> O tênis atual ainda atende
+                        à necessidade, então a troca pode esperar.
+                    </li>
+
+                    <li>
+                        <strong>Posso?</strong> O dinheiro disponível precisa
+                        ser comparado com as contas e com o custo do conserto.
+                    </li>
+
+                    <li>
+                        <strong>É prioridade?</strong> Manter o transporte
+                        funcionando pode ser mais importante neste momento.
+                    </li>
+                </ul>
+
+                <p>
+                    Nesse exemplo, você pode adiar a compra do tênis e
+                    planejá-la para depois. Isso não significa desistir
+                    de algo que deseja, mas escolher o momento de comprar.
+                </p>
+
+                <h3>Uma pausa para compras maiores</h3>
+
+                <p>
+                    Para compras não essenciais e sem urgência, você pode
+                    experimentar esperar três dias antes de decidir.
+                    Durante esse intervalo, pesquise preços, confira
+                    o orçamento e retome as perguntas dos 3 P's.
+                </p>
+
+                <p>
+                    Os três dias são uma sugestão de organização, não uma
+                    regra obrigatória nem uma garantia de evitar compras
+                    por impulso. Adapte o intervalo à situação e não adie
+                    necessidades urgentes, como cuidados de saúde.
+                </p>
+
+                <h3>Outras perguntas úteis</h3>
+
+                <ul>
+                    <li>Qual é o preço total, incluindo frete e outros custos?</li>
+                    <li>Existe desconto para pagamento à vista?</li>
+                    <li>Pesquisei o valor em outros lugares?</li>
+                    <li>Tenho outras parcelas comprometendo os próximos meses?</li>
+                    <li>Eu compraria esse produto se ele não estivesse em promoção?</li>
+                </ul>
+            </section>
+
+            <section class="topico-bloco" id="pequenos-gastos">
+                <h2>4. Observe pequenos gastos e assinaturas</h2>
+
+                <p>
+                    Uma despesa pequena pode ser perfeitamente compatível com
+                    seu orçamento. A questão é conhecer sua frequência e
+                    verificar se ela continua fazendo sentido.
+                </p>
+
+                <p>
+                    O mesmo vale para assinaturas: uma plataforma utilizada
+                    com frequência pode ser útil, enquanto um serviço esquecido
+                    pode continuar sendo cobrado sem trazer benefício.
+                </p>
+
+                <h3>Exemplo de despesas recorrentes</h3>
+
+                <p>
+                    Imagine três serviços hipotéticos: uma plataforma de vídeos
+                    de R$ 30 por mês, um aplicativo de R$ 20 e um serviço de
+                    armazenamento de R$ 10.
+                </p>
+
+                <p>
+                    Juntos, eles representam R$ 60 por mês. Se os preços
+                    permanecerem iguais durante 12 meses, o gasto será
+                    de R$ 720 no período.
+                </p>
+
+                <p>
+                    Esse total não significa que você deve cancelar tudo.
+                    Ele serve para comparar o custo com o uso e decidir
+                    o que merece permanecer.
+                </p>
+
+                <h3>Como revisar suas assinaturas</h3>
+
+                <ul>
+                    <li>Confira os lançamentos do cartão e da conta.</li>
+                    <li>Liste os serviços e os valores cobrados.</li>
+                    <li>Verifique quais você realmente utiliza.</li>
+                    <li>Compare planos e observe possíveis fidelidades.</li>
+                    <li>
+                        Ao cancelar, confira a confirmação e acompanhe
+                        as próximas cobranças.
+                    </li>
+                </ul>
+
+                <blockquote>
+                    O objetivo não é eliminar todo gasto com lazer.
+                    É escolher o que vale a pena para você.
+                </blockquote>
+            </section>
+
+            <section class="topico-bloco" id="metas">
+                <h2>5. Transforme vontades em metas possíveis</h2>
+
+                <p>
+                    Uma vontade se torna mais fácil de acompanhar quando você
+                    define o que pretende fazer, uma estimativa de custo e
+                    um prazo. Depois, compare o valor necessário com o que
+                    realmente cabe no orçamento.
+                </p>
+
+                <p>
+                    Se a conta não fechar, ajuste o prazo, o custo ou a forma
+                    de realizar o objetivo. Uma meta não precisa ser abandonada
+                    apenas porque o primeiro plano ficou pesado.
+                </p>
+
+                <h3>Exemplo: comprar um computador para estudar</h3>
+
+                <p>
+                    Considere um computador de R$ 2.400 e um prazo de 12 meses.
+                    Sem considerar rendimentos ou mudanças no preço, seria
+                    necessário separar R$ 200 por mês.
+                </p>
+
+                <p>
+                    Se R$ 200 não couberem na sua realidade, você pode pesquisar
+                    outro equipamento ou ampliar o prazo. Com 16 meses e o
+                    mesmo preço, a divisão seria de R$ 150 por mês.
+                </p>
+
+                <p>
+                    Esses valores são apenas exemplos. O planejamento precisa
+                    ser revisto se o preço, a renda ou as despesas mudarem.
+                </p>
+
+                <h3>O que registrar na sua meta</h3>
+
+                <ul>
+                    <li>O objetivo e o motivo pelo qual ele é importante.</li>
+                    <li>Uma estimativa do valor necessário.</li>
+                    <li>O prazo desejado.</li>
+                    <li>Quanto você consegue separar sem deixar contas essenciais.</li>
+                    <li>Uma data para revisar o plano.</li>
+                </ul>
+            </section>
+
+            <section class="topico-bloco" id="rotina">
+                <h2>6. Construa uma rotina de acompanhamento</h2>
+
+                <p>
+                    Registrar despesas é um começo, mas o acompanhamento também
+                    envolve comparar o que você planejou com o que aconteceu.
+                    Isso permite identificar esquecimentos, mudanças de preço
+                    e compromissos que ficaram fora da previsão.
+                </p>
+
+                <p>
+                    Você pode usar um caderno, uma planilha ou um aplicativo.
+                    Escolha um formato que consiga atualizar e consultar
+                    com facilidade.
+                </p>
+
+                <h3>Uma sugestão de organização</h3>
+
+                <ul>
+                    <li>
+                        <strong>Durante a semana:</strong> registre os gastos
+                        e confira os pagamentos realizados.
+                    </li>
+                    <li>
+                        <strong>Uma vez por semana:</strong> observe o saldo,
+                        a fatura e as contas que ainda vão vencer.
+                    </li>
+                    <li>
+                        <strong>No fim do mês:</strong> compare receitas e
+                        despesas e prepare uma previsão para o mês seguinte.
+                    </li>
+                </ul>
+
+                <h3>Exemplo do dia a dia</h3>
+
+                <p>
+                    Você percebe que os gastos com transporte ficaram acima
+                    do previsto. Ao revisar os registros, identifica que
+                    precisou usar transporte por aplicativo em dias de chuva.
+                </p>
+
+                <p>
+                    Em vez de considerar o mês apenas um fracasso, use a
+                    informação para ajustar a previsão e avaliar alternativas
+                    que sejam viáveis e seguras.
+                </p>
+            </section>
+
+            <section class="topico-bloco" id="comparacao">
+                <h2>7. Compare escolhas com a sua realidade</h2>
+
+                <p>
+                    Uma viagem, um carro ou um aparelho novo mostram uma parte
+                    da vida de alguém, mas não revelam sua renda, suas dívidas
+                    ou o planejamento que existiu antes da compra.
+                </p>
+
+                <p>
+                    Por isso, ao sentir vontade de acompanhar o padrão de
+                    consumo de outra pessoa, volte às suas próprias prioridades.
+                    O que cabe no orçamento dela pode não caber no seu agora.
+                </p>
+
+                <h3>Exemplo do dia a dia</h3>
+
+                <p>
+                    Seus amigos combinam uma viagem, mas você já está pagando
+                    um curso e organizando despesas de casa. Você pode propor
+                    uma atividade mais barata, participar apenas de uma parte
+                    do passeio ou planejar outra viagem para depois.
+                </p>
+
+                <p>
+                    Não se trata de evitar lazer, e sim de encontrar uma forma
+                    de participar sem assumir um compromisso que prejudique
+                    outras necessidades.
+                </p>
+            </section>
+
+            <section class="topico-bloco" id="primeiros-passos">
+                <h2>8. Escolha uma mudança para começar</h2>
+
+                <p>
+                    Você não precisa reorganizar toda a vida financeira
+                    de uma vez. Use os tópicos desta página para escolher
+                    uma ação e acompanhar o resultado.
+                </p>
+
+                <ol>
+                    <li>
+                        Liste suas receitas e as contas que já estão
+                        comprometidas.
+                    </li>
+                    <li>
+                        Registre os gastos para descobrir como o dinheiro
+                        está sendo utilizado.
+                    </li>
+                    <li>
+                        Revise uma assinatura ou uma compra que você
+                        costuma fazer automaticamente.
+                    </li>
+                    <li>
+                        Escolha uma meta e verifique quanto cabe separar
+                        para ela.
+                    </li>
+                    <li>
+                        Marque um momento para revisar o planejamento
+                        e fazer ajustes.
+                    </li>
+                </ol>
+
+                <blockquote>
+                    Um planejamento útil precisa acompanhar sua realidade,
+                    não exigir uma rotina impossível de manter.
+                </blockquote>
             </section>
 
             <section class="topico-bloco">
-                <h3>O Perigo Invisível das Assinaturas Recorrentes</h3>
-                <p>Planos de streaming, aplicativos premium, academias que você não frequenta, clubes de benefícios... De pouco em pouco, assinaturas de R$ 30 a R$ 70 vão corroendo silenciosamente uma enorme fatia do seu patrimônio. No longo prazo, esse dinheiro deixa de render juros compostos. Crie o hábito de auditar seus extratos mensalmente e cancele tudo o que não foi utilizado ativamente nos últimos 30 dias.</p>
+                <h2>Continue aprendendo</h2>
+
+                <p>
+                    Na área de Educação Financeira, você encontra os próximos
+                    assuntos para aprofundar sua organização: orçamento,
+                    reserva de emergência, inflação, juros e termos essenciais.
+                </p>
+
+                <div class="acoes-home">
+                    <a class="botao" href="educacao-financeira.html">
+                        Explorar educação financeira
+                    </a>
+
+                    <a class="botao botao-secundario" href="calculadoras.html">
+                        Conhecer as calculadoras
+                    </a>
+                </div>
             </section>
 
-            <section class="topico-bloco">
-                <h3>Uso Estratégico do Cartão de Crédito</h3>
-                <p>Cartão de crédito não é extensão do seu salário. Se houver a opção de parcelamento sem juros, aproveite! Deixe o dinheiro correspondente às parcelas futuras rendendo 100% do CDI na Renda Fixa e configure o pagamento automático. Assim, o seu dinheiro trabalha para você até o momento de quitar a obrigação.</p>
-            </section>
         </article>
+
+        <aside class="aviso-educativo" aria-label="Aviso sobre o conteúdo">
+            <h2>Respeite sua realidade financeira</h2>
+
+            <p>
+                Os exemplos desta página são hipotéticos e têm finalidade
+                educativa. As sugestões devem ser adaptadas à sua renda,
+                às suas despesas e às necessidades da sua família.
+            </p>
+        </aside>
     </main>
 
     <footer>
-        <p>&copy; 2026 com suas finanças em dia</p>
+        <p class="nome-rodape">DuFerreira | Investe</p>
+        <p>Educação financeira com linguagem simples.</p>
+        <p>&copy; DuFerreira | Investe.</p>
     </footer>
-
 </body>
+
 </html>
