@@ -1,0 +1,523 @@
+/* PÁGINA PRINCIPAL — RENDA FIXA */
+
+.pagina-renda-fixa main,
+.pagina-renda-fixa main * {
+    box-sizing: border-box;
+}
+
+.pagina-renda-fixa main {
+    width: min(1180px, calc(100% - 40px));
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 0 64px;
+}
+
+/* Caminho da página */
+
+.pagina-renda-fixa .caminho-pagina {
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.pagina-renda-fixa .caminho-pagina ol {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    font-size: 0.95rem;
+}
+
+.pagina-renda-fixa .caminho-pagina li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-renda-fixa .caminho-pagina li + li::before {
+    content: "/";
+    color: #77847d;
+}
+
+.pagina-renda-fixa .caminho-pagina a {
+    color: #285c48;
+    text-decoration: none;
+}
+
+.pagina-renda-fixa .caminho-pagina a:hover {
+    text-decoration: underline;
+}
+
+/* Apresentação da página */
+
+.pagina-renda-fixa .hero {
+    display: block;
+    width: 100%;
+    min-height: auto;
+
+    margin: 0 0 40px;
+    padding: clamp(28px, 5vw, 60px);
+
+    background: #eaf5ee;
+    border: 1px solid #d7e5dc;
+    border-radius: 24px;
+
+    text-align: left;
+}
+
+.pagina-renda-fixa .hero .etiqueta {
+    display: inline-block;
+    margin: 0 0 16px;
+
+    color: #285c48;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.pagina-renda-fixa .hero h1 {
+    max-width: 900px;
+    margin: 0 0 20px;
+
+    color: #193f32;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.pagina-renda-fixa .hero .introducao {
+    max-width: 850px;
+    margin: 0;
+
+    color: #52635b;
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    line-height: 1.8;
+}
+
+.pagina-renda-fixa .acoes-home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+
+    margin: 26px 0 0;
+    padding: 0;
+
+    border: 0;
+}
+
+.pagina-renda-fixa .acoes-home .botao {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 13px 22px;
+
+    background: #285c48;
+    border: 1px solid #285c48;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.pagina-renda-fixa .acoes-home .botao:hover {
+    background: #1d4636;
+    border-color: #1d4636;
+}
+
+.pagina-renda-fixa .acoes-home .botao-secundario {
+    background: transparent;
+    color: #285c48;
+}
+
+.pagina-renda-fixa .acoes-home .botao-secundario:hover {
+    background: #dcece2;
+    color: #193f32;
+}
+
+/* Blocos de conteúdo */
+
+.pagina-renda-fixa .topico-bloco {
+    display: block;
+    margin: 0 0 28px;
+    padding: clamp(24px, 3vw, 36px);
+
+    background: #ffffff;
+    border: 1px solid #dce5df;
+    border-radius: 18px;
+}
+
+.pagina-renda-fixa main h2 {
+    margin: 0 0 16px;
+
+    color: #193f32;
+    font-size: clamp(1.45rem, 2.3vw, 1.9rem);
+    line-height: 1.3;
+}
+
+.pagina-renda-fixa .topico-bloco h3 {
+    margin: 26px 0 10px;
+
+    color: #234b3b;
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.pagina-renda-fixa .topico-bloco p {
+    margin: 0 0 16px;
+    line-height: 1.85;
+}
+
+.pagina-renda-fixa .topico-bloco > :last-child {
+    margin-bottom: 0;
+}
+
+.pagina-renda-fixa .topico-bloco ul,
+.pagina-renda-fixa .topico-bloco ol {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+
+.pagina-renda-fixa .topico-bloco li {
+    margin-bottom: 12px;
+    line-height: 1.75;
+}
+
+.pagina-renda-fixa .topico-bloco blockquote {
+    margin: 24px 0 0;
+    padding: 18px 22px;
+
+    background: #f0f7f2;
+    border: 0;
+    border-left: 4px solid #367557;
+    border-radius: 0 10px 10px 0;
+
+    color: #28513f;
+    line-height: 1.8;
+}
+
+/* Seção de artigos */
+
+.pagina-renda-fixa #assuntos {
+    display: block;
+    margin: 48px 0;
+    padding: 0;
+
+    scroll-margin-top: 110px;
+}
+
+.pagina-renda-fixa #assuntos > p {
+    max-width: 850px;
+    margin: 0 0 28px;
+
+    color: #5b6861;
+    line-height: 1.8;
+}
+
+/* Grade dos cartões */
+
+.pagina-renda-fixa #assuntos .cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-renda-fixa #assuntos .cards-container > .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    height: auto;
+    min-height: 300px;
+
+    margin: 0;
+    padding: 28px;
+
+    background: #ffffff;
+    border: 1px solid #dce5df;
+    border-radius: 18px;
+
+    box-shadow: 0 8px 24px rgba(25, 63, 50, 0.04);
+
+    overflow-wrap: anywhere;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.pagina-renda-fixa #assuntos .card:hover {
+    transform: translateY(-4px);
+    border-color: #9bbca8;
+    box-shadow: 0 12px 28px rgba(25, 63, 50, 0.09);
+}
+
+.pagina-renda-fixa #assuntos .card .etiqueta {
+    display: block;
+    position: static;
+
+    width: auto;
+    margin: 0 0 18px;
+    padding: 0;
+
+    background: transparent;
+
+    color: #367557;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.pagina-renda-fixa #assuntos .card h3 {
+    margin: 0 0 14px;
+    padding: 0;
+
+    color: #193f32;
+    font-size: 1.3rem;
+    line-height: 1.35;
+}
+
+.pagina-renda-fixa #assuntos .card p {
+    flex: 1;
+
+    margin: 0 0 24px;
+    padding: 0;
+
+    color: #5b6861;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.pagina-renda-fixa #assuntos .card > a {
+    display: inline-block;
+    position: static;
+
+    width: auto;
+    margin: auto 0 0;
+    padding: 0;
+
+    color: #285c48;
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.6;
+
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.pagina-renda-fixa #assuntos .card > a:hover {
+    color: #173b2d;
+}
+
+/* Tabela comparativa */
+
+.pagina-renda-fixa #comparacao {
+    scroll-margin-top: 110px;
+}
+
+.pagina-renda-fixa .tabela-container {
+    width: 100%;
+    margin: 24px 0;
+    overflow-x: auto;
+
+    border: 1px solid #dce5df;
+    border-radius: 12px;
+}
+
+.pagina-renda-fixa .tabela-financeira {
+    width: 100%;
+    min-width: 680px;
+
+    margin: 0;
+    border-collapse: collapse;
+
+    background: #ffffff;
+    font-size: 0.95rem;
+}
+
+.pagina-renda-fixa .tabela-financeira caption {
+    padding: 16px;
+
+    color: #5b6861;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.pagina-renda-fixa .tabela-financeira th,
+.pagina-renda-fixa .tabela-financeira td {
+    padding: 16px;
+
+    border-bottom: 1px solid #e4ebe6;
+
+    line-height: 1.65;
+    text-align: left;
+    vertical-align: top;
+}
+
+.pagina-renda-fixa .tabela-financeira thead th {
+    background: #eaf5ee;
+    color: #193f32;
+}
+
+.pagina-renda-fixa .tabela-financeira tbody th {
+    color: #28513f;
+    font-weight: 700;
+}
+
+.pagina-renda-fixa .tabela-financeira tbody tr:last-child th,
+.pagina-renda-fixa .tabela-financeira tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Perguntas frequentes */
+
+.pagina-renda-fixa .pergunta-frequente {
+    margin: 12px 0;
+    padding: 18px 20px;
+
+    background: #f7faf8;
+    border: 1px solid #dce5df;
+    border-radius: 12px;
+}
+
+.pagina-renda-fixa .pergunta-frequente summary {
+    color: #234b3b;
+    font-weight: 700;
+    line-height: 1.6;
+
+    cursor: pointer;
+}
+
+.pagina-renda-fixa .pergunta-frequente p {
+    margin: 14px 0 0;
+    color: #5b6861;
+    line-height: 1.8;
+}
+
+/* Aviso educativo */
+
+.pagina-renda-fixa .aviso-educativo {
+    margin: 32px 0 0;
+    padding: 26px;
+
+    background: #edf4ef;
+    border: 1px solid #d7e5dc;
+    border-radius: 16px;
+}
+
+.pagina-renda-fixa .aviso-educativo h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+}
+
+.pagina-renda-fixa .aviso-educativo p {
+    margin: 0;
+    color: #52635b;
+    line-height: 1.8;
+}
+
+/* Navegação por teclado */
+
+.pagina-renda-fixa main a:focus-visible,
+.pagina-renda-fixa main summary:focus-visible {
+    outline: 3px solid #367557;
+    outline-offset: 5px;
+}
+
+/* Telas intermediárias */
+
+@media (max-width: 1000px) {
+    .pagina-renda-fixa #assuntos .cards-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 640px) {
+    .pagina-renda-fixa main {
+        width: calc(100% - 32px);
+        padding-top: 24px;
+        padding-bottom: 40px;
+    }
+
+    .pagina-renda-fixa .hero {
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    .pagina-renda-fixa .hero h1 {
+        font-size: 2rem;
+    }
+
+    .pagina-renda-fixa .acoes-home {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .pagina-renda-fixa .acoes-home .botao {
+        width: 100%;
+    }
+
+    .pagina-renda-fixa .topico-bloco {
+        padding: 24px 20px;
+    }
+
+    .pagina-renda-fixa #assuntos .cards-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .pagina-renda-fixa #assuntos .cards-container > .card {
+        min-height: 0;
+        padding: 24px;
+    }
+
+    .pagina-renda-fixa .aviso-educativo {
+        padding: 24px 20px;
+    }
+}
+
+/* Respeita a preferência por menos movimento */
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina-renda-fixa #assuntos .card,
+    .pagina-renda-fixa .acoes-home .botao {
+        transition: none;
+    }
+
+    .pagina-renda-fixa #assuntos .card:hover {
+        transform: none;
+    }
+}

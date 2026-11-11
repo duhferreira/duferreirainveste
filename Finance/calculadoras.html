@@ -1,446 +1,1039 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferramentas de Simulação | Finanças Blindadas</title>
+
+    <meta name="description"
+        content="Simule juros compostos com aportes mensais e faça uma estimativa de parcelas da rescisão trabalhista.">
+
+    <title>Calculadoras | DuFerreira | Investe</title>
+
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        .box-calculadora {
-            background: #f8f9fa;
-            border: 2px solid #1b4332;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 3rem;
-        }
-        .form-group {
-            margin-bottom: 1.2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .form-group input, .form-group select {
-            padding: 0.7rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        .btn-calc {
-            background-color: #1b4332;
-            color: #fff;
-            padding: 1rem;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1rem;
-            transition: background 0.3s;
-        }
-        .btn-calc:hover { background-color: #0f2419; }
-        .resultado-box {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background-color: #e8f5e9;
-            border-left: 5px solid #2e7d32;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #1b5e20;
-        }
-    </style>
+    <link rel="stylesheet" href="css/calculadoras.css">
+
 </head>
-<body>
+
+<body class="pagina-calculadoras">
+    <a class="pular-conteudo" href="#conteudo">
+        Pular para o conteúdo
+    </a>
 
     <header>
-        <div class="logo">
-            <h1>Finanças em dia</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="comportamento.html">Mentalidade & Hábitos</a></li>
-                <li><a href="reserva.html">Reserva & Carteira</a></li>
-                <li><a href="calculadoras.html">Ferramentas & Calculadoras</a></li>
-                <li><a href="investimentos.html">Longo Prazo & Ações</a></li>
-                <li><a href="cripto.html">Criptomoedas</a></li>
-                <li><a href="contatos.html">Contatos</a></li>
+        <a class="logo" href="index.html" aria-label="DuFerreira | Investe — Home">
+            DuFerreira | Investe
+        </a>
+
+        <nav aria-label="Menu principal">
+            <ul class="menu-principal">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="comportamento.html">
+                        Hábitos &amp; Mentalidade
+                    </a>
+                </li>
+
+                <li>
+                    <a href="educacao-financeira.html">
+                        Educação Financeira
+                    </a>
+                </li>
+
+                <li>
+                    <a href="renda-fixa.html">Renda Fixa</a>
+                </li>
+
+                <li>
+                    <a href="renda-variavel.html">Renda Variável</a>
+                </li>
+
+                <li>
+                    <details class="menu-ferramentas">
+                        <summary>Ferramentas</summary>
+
+                        <ul class="submenu">
+                            <li>
+                                <a href="calculadoras.html" class="active" aria-current="page">
+                                    Calculadoras
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+
+                <li>
+                    <a href="contatos.html">Contatos</a>
+                </li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo">
         <article class="conteudo-artigo">
-            <h2>Ferramentas de Tomada de Decisão Financeira</h2>
-            <p class="introducao">Utilize nossos simuladores interativos para projetar o futuro da sua carteira ou planejar seus movimentos profissionais com exatidão.</p>
+            <h1>Calculadoras e simuladores</h1>
 
-           <!-- JUROS COMPOSTOS TESOURO SELIC -->
-<section class="box-calculadora">
-    <h3>1. Simulador de Aposentadoria Real: Juros Compostos no Tesouro Selic</h3>
-    <p style="margin-bottom: 1.5rem; color: #555;">
-        Descubra como o Tesouro Selic reconstrói seu futuro sem depender do teto ou das regras do INSS.
-    </p>
+            <p class="introducao">
+                Faça simulações de juros compostos e uma estimativa
+                de parcelas da rescisão. Os resultados dependem
+                das informações preenchidas e não substituem
+                a conferência dos documentos.
+            </p>
 
-    <div class="form-group">
-        <label for="inicialSelic">Aporte Inicial (R$):</label>
-        <input type="number" id="inicialSelic" value="1000" min="0" step="0.01">
-    </div>
+            <noscript>
+                <p class="aviso-calculadora">
+                    Ative o JavaScript no navegador
+                    para utilizar as calculadoras.
+                </p>
+            </noscript>
 
-    <div class="form-group">
-        <label for="mensalSelic">Aporte Mensal Constante (R$):</label>
-        <input type="number" id="mensalSelic" value="300" min="0" step="0.01">
-    </div>
+            <!-- JUROS COMPOSTOS -->
 
-    <div class="form-group">
-        <label for="anosSelic">Tempo de Investimento (em anos):</label>
-        <input type="number" id="anosSelic" value="20" min="1" step="1">
-    </div>
+            <section class="box-calculadora" aria-labelledby="titulo-juros">
+                <h2 id="titulo-juros">
+                    1. Simulador de juros compostos
+                </h2>
 
-    <div class="form-group">
-        <label for="taxaSelic">Taxa Anual Estimada (%):</label>
-        <input type="number" id="taxaSelic" value="10.75" min="0" step="0.01">
-    </div>
+                <p class="descricao-calculadora">
+                    Projeção com taxa anual constante
+                    e aportes no final de cada mês.
+                    Não considera inflação, impostos ou taxas.
+                    A taxa preenchida é apenas um exemplo.
+                </p>
 
-    <button class="btn-calc" onclick="calcularJurosCompostos()">
-        Simular Aposentadoria no Tesouro
-    </button>
+                <form id="formJuros">
+                    <div class="form-group">
+                        <label for="inicialSelic">Aporte inicial (R$)</label>
 
-    <div id="resultadoSelic" class="resultado-box" style="display:none;"></div>
-</section>
+                        <input type="number" id="inicialSelic" value="1000" min="0" max="1000000000" step="0.01"
+                            required>
+                    </div>
 
-<!-- TRABALHISTA RESCISÓRIA -->
-<section class="box-calculadora">
-    <h3>2. Calculadora Rescisória Trabalhista</h3>
-    <p style="margin-bottom: 1.5rem; color: #555;">
-        Estime os valores brutos da sua rescisão contratual de acordo com o tipo de desligamento.
-    </p>
+                    <div class="form-group">
+                        <label for="mensalSelic">Aporte mensal (R$)</label>
 
-    <div class="form-group">
-        <label for="salarioTrabalhista">Último Salário Bruto (R$):</label>
-        <input type="number" id="salarioTrabalhista" value="2500" min="0" step="0.01">
-    </div>
+                        <input type="number" id="mensalSelic" value="300" min="0" max="1000000000" step="0.01" required>
+                    </div>
 
-    <div class="form-group">
-        <label for="saldoFgts">Saldo Atual do FGTS deste Contrato (R$):</label>
-        <input type="number" id="saldoFgts" value="0" min="0" step="0.01">
-    </div>
+                    <div class="form-group">
+                        <label for="anosSelic">
+                            Tempo de investimento em anos completos
+                        </label>
 
-    <div class="grupo-datas">
-        <div class="campo-data">
-            <label for="dataEntrada">Data de Entrada:</label>
-            <input type="text" id="dataEntrada" name="dataEntrada" placeholder="DD/MM/AAAA">
-        </div>
+                        <input type="number" id="anosSelic" value="20" min="1" max="100" step="1" required>
+                    </div>
 
-        <div class="campo-data">
-            <label for="dataSaida">Data de Saída:</label>
-            <input type="text" id="dataSaida" name="dataSaida" placeholder="DD/MM/AAAA">
-        </div>
-    </div>
+                    <div class="form-group">
+                        <label for="taxaSelic">
+                            Taxa anual efetiva estimada (%)
+                        </label>
 
-    <div class="form-group">
-        <label for="tipoRescisao">Tipo de Rescisão:</label>
-        <select id="tipoRescisao">
-            <option value="demissaoSemJusta">Demissão Sem Justa Causa</option>
-            <option value="pedidoDemissao">Pedido de Demissão pelo Empregado</option>
-            <option value="acordoComum">Acordo Comum (Reforma Trabalhista)</option>
-            <option value="demissaoJustaCausa">Demissão por Justa Causa</option>
-        </select>
-    </div>
+                        <input type="number" id="taxaSelic" value="10" min="0" max="100" step="0.01" required>
+                    </div>
 
-    <button class="btn-calc" onclick="calcularRescisao()">
-        Calcular Direitos Estimados
-    </button>
+                    <button class="btn-calc" type="submit">
+                        Simular juros compostos
+                    </button>
 
-    <div id="resultadoTrabalhista" class="resultado-box" style="display:none;"></div>
-</section>
+                    <p id="erroSelic" class="erro-calculadora" role="alert" hidden></p>
 
-<script>
-function formatarMoeda(valor) {
-    return valor.toLocaleString('pt-BR', {
-        style: 'currency',
-        currency: 'BRL'
-    });
-}
+                    <div id="resultadoSelic" class="resultado-box" role="status" aria-live="polite" aria-atomic="true"
+                        hidden></div>
+                </form>
+            </section>
 
-function converterDataBr(valorTexto) {
-    if (!valorTexto) return null;
+            <!-- RESCISÃO -->
 
-    const partes = valorTexto.split('/');
+            <section class="box-calculadora" aria-labelledby="titulo-rescisao">
+                <h2 id="titulo-rescisao">
+                    2. Estimativa de rescisão trabalhista
+                </h2>
 
-    if (partes.length !== 3) return null;
+                <p class="descricao-calculadora">
+                    Estime algumas parcelas brutas
+                    de um contrato CLT comum,
+                    com salário mensal fixo.
+                    Confira os dados e o resultado com o RH.
+                </p>
 
-    const dia = parseInt(partes[0], 10);
-    const mes = parseInt(partes[1], 10) - 1;
-    const ano = parseInt(partes[2], 10);
+                <div class="aviso-calculadora">
+                    <p>
+                        Não contempla trabalho doméstico,
+                        contrato de experiência, remuneração variável,
+                        afastamentos, férias coletivas ou faltas
+                        que alterem os direitos.
+                    </p>
 
-    if (
-        isNaN(dia) ||
-        isNaN(mes) ||
-        isNaN(ano) ||
-        mes < 0 ||
-        mes > 11 ||
-        dia < 1 ||
-        dia > 31
-    ) {
-        return null;
-    }
+                    <p>
+                        Não desconta INSS, Imposto de Renda,
+                        adiantamentos, parcelas já recebidas
+                        ou aviso não cumprido.
+                        O resultado não é o valor líquido a receber.
+                    </p>
+                </div>
 
-    const data = new Date(ano, mes, dia);
+                <form id="formRescisao">
+                    <div class="form-group">
+                        <label for="salarioTrabalhista">
+                            Salário mensal bruto usado na conta (R$)
+                        </label>
 
-    if (
-        data.getDate() !== dia ||
-        data.getMonth() !== mes ||
-        data.getFullYear() !== ano
-    ) {
-        return null;
-    }
+                        <input type="number" id="salarioTrabalhista" value="2500" min="0.01" max="10000000" step="0.01"
+                            required>
 
-    return data;
-}
+                        <small>
+                            Médias de comissões, horas extras e adicionais
+                            não são calculadas automaticamente.
+                        </small>
+                    </div>
 
-function calcularJurosCompostos() {
-    const inicial = parseFloat(document.getElementById('inicialSelic').value) || 0;
-    const aporteMensal = parseFloat(document.getElementById('mensalSelic').value) || 0;
-    const anos = parseInt(document.getElementById('anosSelic').value) || 0;
-    const taxaAnual = parseFloat(document.getElementById('taxaSelic').value) || 0;
+                    <div class="grupo-datas">
+                        <div class="form-group">
+                            <label for="dataEntrada">Data de entrada</label>
 
-    const resultado = document.getElementById('resultadoSelic');
+                            <input type="text" id="dataEntrada" placeholder="DD/MM/AAAA" maxlength="10"
+                                inputmode="numeric" required>
+                        </div>
 
-    if (inicial < 0 || aporteMensal < 0 || anos <= 0 || taxaAnual < 0) {
-        alert('Preencha valores válidos. O tempo deve ser maior que zero.');
-        return;
-    }
+                        <div class="form-group">
+                            <label for="dataSaida">
+                                Data de saída, antes da projeção do aviso
+                            </label>
 
-    const meses = anos * 12;
-    const taxaMensal = Math.pow(1 + taxaAnual / 100, 1 / 12) - 1;
+                            <input type="text" id="dataSaida" placeholder="DD/MM/AAAA" maxlength="10"
+                                inputmode="numeric" required>
+                        </div>
+                    </div>
 
-    // Valor futuro do aporte inicial
-    let total = inicial * Math.pow(1 + taxaMensal, meses);
+                    <div class="form-group">
+                        <label for="tipoRescisao">Tipo de desligamento</label>
 
-    // Aportes mensais feitos ao final de cada mês
-    for (let i = 1; i <= meses; i++) {
-        total += aporteMensal * Math.pow(1 + taxaMensal, meses - i);
-    }
+                        <select id="tipoRescisao">
+                            <option value="demissaoSemJusta">
+                                Dispensa sem justa causa
+                            </option>
 
-    const totalInvestido = inicial + aporteMensal * meses;
-    const totalJuros = total - totalInvestido;
+                            <option value="pedidoDemissao">
+                                Pedido de demissão
+                            </option>
 
-    resultado.style.display = 'block';
-    resultado.innerHTML = `
-        <strong>Patrimônio acumulado após ${anos} ano(s):</strong><br>
-        ${formatarMoeda(total)}<br><br>
+                            <option value="acordoComum">
+                                Acordo entre empregado e empregador
+                            </option>
 
-        <strong>Total investido:</strong> ${formatarMoeda(totalInvestido)}<br>
-        <strong>Juros acumulados:</strong> ${formatarMoeda(totalJuros)}<br><br>
+                            <option value="demissaoJustaCausa">
+                                Dispensa por justa causa
+                            </option>
+                        </select>
+                    </div>
 
-        <span style="font-size:0.95rem; color:#555; font-weight:normal;">
-            Esta é uma estimativa bruta. O resultado líquido do Tesouro Selic pode ser menor devido ao Imposto de Renda e às taxas da B3.
-        </span>
-    `;
-}
+                    <div class="form-group">
+                        <label for="diasAviso">
+                            Dias de aviso prévio indenizado a receber
+                        </label>
 
-function calcularMesesCompletos(dataInicio, dataFim) {
-    let meses = (dataFim.getFullYear() - dataInicio.getFullYear()) * 12;
-    meses += dataFim.getMonth() - dataInicio.getMonth();
+                        <input type="number" id="diasAviso" value="0" min="0" max="90" step="1" required>
 
-    // Se ainda não completou o mesmo dia no mês, não conta como mês cheio
-    if (dataFim.getDate() < dataInicio.getDate()) {
-        meses--;
-    }
+                        <small>
+                            Informe 0 se não houver aviso indenizado.
+                            Confirme os dias com o RH.
+                            No acordo, a calculadora aplica metade
+                            da indenização dos dias informados.
+                        </small>
+                    </div>
 
-    return Math.max(meses, 0);
-}
+                    <div class="form-group">
+                        <label for="fimProjetado">
+                            Data final projetada do aviso, se houver
+                        </label>
 
-function calcularMesesProporcionais(dataInicio, dataFim) {
-    let meses = calcularMesesCompletos(dataInicio, dataFim);
+                        <input type="text" id="fimProjetado" placeholder="DD/MM/AAAA" maxlength="10"
+                            inputmode="numeric">
 
-    // Regra prática: 15 dias ou mais contam como mês completo
-    const diasNoMes = dataFim.getDate() - dataInicio.getDate();
+                        <small>
+                            Opcional. Use a data confirmada no documento
+                            da rescisão. Ela será usada somente para
+                            os efeitos no 13º e nas férias.
+                        </small>
+                    </div>
 
-    if (diasNoMes >= 15) {
-        meses++;
-    }
+                    <div class="form-group">
+                        <label for="feriasAdquiridas">
+                            Férias completas ainda a pagar,
+                            sem o adicional de 1/3 (R$)
+                        </label>
 
-    return Math.max(meses, 0);
-}
+                        <input type="number" id="feriasAdquiridas" value="0" min="0" max="100000000" step="0.01"
+                            required>
 
-function calcularRescisao() {
-    try {
-        const salarioField = document.getElementById('salarioTrabalhista');
-        const saldoFgtsField = document.getElementById('saldoFgts');
-        const tipoField = document.getElementById('tipoRescisao');
-        const entradaField = document.getElementById('dataEntrada');
-        const saidaField = document.getElementById('dataSaida');
-        const resultadoBox = document.getElementById('resultadoTrabalhista');
+                        <small>
+                            Informe o valor-base conferido com o RH.
+                            Se houver dobra devida, inclua-a nessa base.
+                            O adicional de 1/3 será acrescentado aqui.
+                            Informe 0 se todos os períodos completos
+                            já estiverem quitados.
+                        </small>
+                    </div>
 
-        if (
-            !salarioField ||
-            !saldoFgtsField ||
-            !tipoField ||
-            !entradaField ||
-            !saidaField ||
-            !resultadoBox
+                    <div class="form-group">
+                        <label for="saldoFgts">
+                            Base do FGTS para fins rescisórios (R$)
+                        </label>
+
+                        <input type="number" id="saldoFgts" min="0" max="1000000000" step="0.01"
+                            placeholder="Deixe vazio se não souber">
+
+                        <small>
+                            Confira no extrato para fins rescisórios
+                            ou com o RH. Essa base pode ser diferente
+                            do saldo disponível no aplicativo.
+                            A multa será mostrada separadamente.
+                        </small>
+                    </div>
+
+                    <button class="btn-calc" type="submit">
+                        Calcular estimativa
+                    </button>
+
+                    <p id="erroTrabalhista" class="erro-calculadora" role="alert" hidden></p>
+
+                    <div id="resultadoTrabalhista" class="resultado-box" role="status" aria-live="polite"
+                        aria-atomic="true" hidden></div>
+                </form>
+            </section>
+
+            <aside class="aviso-calculadora">
+                <p>
+                    Os simuladores têm finalidade educativa.
+                    A projeção financeira não garante rentabilidade.
+                    A estimativa trabalhista não confirma todos
+                    os direitos, descontos ou valores da rescisão.
+                </p>
+            </aside>
+        </article>
+    </main>
+
+    <footer>
+        <p class="nome-rodape">DuFerreira | Investe</p>
+        <p>Educação financeira com linguagem simples.</p>
+        <p>&copy; 2026 DuFerreira | Investe.</p>
+    </footer>
+
+    <script>
+        "use strict";
+
+        const DIA_EM_MS = 86400000;
+
+        function formatarMoeda(valor) {
+            return valor.toLocaleString("pt-BR", {
+                style: "currency",
+                currency: "BRL"
+            });
+        }
+
+        function lerNumero(
+            id,
+            nome,
+            minimo = 0,
+            maximo = Infinity,
+            inteiro = false
         ) {
-            alert('Erro interno: um ou mais campos não foram encontrados no HTML.');
-            return;
+            const campo = document.getElementById(id);
+
+            if (!campo || campo.value.trim() === "") {
+                throw new Error("Preencha o campo: " + nome + ".");
+            }
+
+            const valor = campo.valueAsNumber;
+
+            if (
+                !Number.isFinite(valor) ||
+                valor < minimo ||
+                valor > maximo ||
+                (inteiro && !Number.isInteger(valor))
+            ) {
+                throw new Error(
+                    "Confira o valor informado em: " + nome + "."
+                );
+            }
+
+            return valor;
         }
 
-        const salario = parseFloat(salarioField.value) || 0;
-        const saldoFgts = parseFloat(saldoFgtsField.value) || 0;
-        const tipo = tipoField.value;
+        function converterDataBr(texto) {
+            const partes = /^(\d{2})\/(\d{2})\/(\d{4})$/.exec(
+                String(texto).trim()
+            );
 
-        const dataEntrada = converterDataBr(entradaField.value);
-        const dataSaida = converterDataBr(saidaField.value);
+            if (!partes) return null;
 
-        if (salario <= 0) {
-            alert('Informe um salário bruto válido.');
-            return;
+            const dia = Number(partes[1]);
+            const mes = Number(partes[2]);
+            const ano = Number(partes[3]);
+
+            if (ano < 1900 || ano > 2100) return null;
+
+            const data = new Date(Date.UTC(ano, mes - 1, dia));
+
+            if (
+                data.getUTCFullYear() !== ano ||
+                data.getUTCMonth() !== mes - 1 ||
+                data.getUTCDate() !== dia
+            ) {
+                return null;
+            }
+
+            return data;
         }
 
-        if (!dataEntrada || !dataSaida) {
-            alert('Informe as datas de entrada e saída no formato DD/MM/AAAA.');
-            return;
+        function somarDias(data, quantidade) {
+            const nova = new Date(data.getTime());
+            nova.setUTCDate(nova.getUTCDate() + quantidade);
+            return nova;
         }
 
-        if (dataSaida < dataEntrada) {
-            alert('A data de saída não pode ser anterior à data de entrada.');
-            return;
+        function diasInclusivos(inicio, fim) {
+            return Math.round((fim - inicio) / DIA_EM_MS) + 1;
         }
 
-        // Saldo de salário: dias trabalhados no mês da saída, incluindo o próprio dia
-        const diasTrabalhadosNoMes = dataSaida.getDate();
-        const saldoSalario = (salario / 30) * diasTrabalhadosNoMes;
+        function somarMeses(data, quantidade) {
+            const primeiroDia = new Date(Date.UTC(
+                data.getUTCFullYear(),
+                data.getUTCMonth() + quantidade,
+                1
+            ));
 
-        // 13º proporcional: considera os meses trabalhados no ano da saída
-        const inicioAnoSaida = new Date(dataSaida.getFullYear(), 0, 1);
-        const meses13 = calcularMesesProporcionais(inicioAnoSaida, dataSaida);
-        const decimoTerceiroProporcional = (salario / 12) * meses13;
+            const ultimoDia = new Date(Date.UTC(
+                primeiroDia.getUTCFullYear(),
+                primeiroDia.getUTCMonth() + 1,
+                0
+            )).getUTCDate();
 
-        // Férias proporcionais: considera o último período aquisitivo
-        const inicioPeriodoAquisitivo = new Date(
-            dataEntrada.getFullYear(),
-            dataEntrada.getMonth(),
-            dataEntrada.getDate()
+            primeiroDia.setUTCDate(
+                Math.min(data.getUTCDate(), ultimoDia)
+            );
+
+            return primeiroDia;
+        }
+
+        function calcularAvosDecimo(entrada, fim) {
+            const ano = fim.getUTCFullYear();
+            let avos = 0;
+
+            for (let mes = 0; mes < 12; mes++) {
+                const primeiro = new Date(Date.UTC(ano, mes, 1));
+                const ultimo = new Date(Date.UTC(ano, mes + 1, 0));
+
+                const inicioContagem = new Date(Math.max(
+                    entrada.getTime(),
+                    primeiro.getTime()
+                ));
+
+                const fimContagem = new Date(Math.min(
+                    fim.getTime(),
+                    ultimo.getTime()
+                ));
+
+                if (
+                    fimContagem >= inicioContagem &&
+                    diasInclusivos(inicioContagem, fimContagem) >= 15
+                ) {
+                    avos++;
+                }
+            }
+
+            return avos;
+        }
+
+        function calcularAvosFerias(entrada, fim) {
+            const depoisDoFim = somarDias(fim, 1);
+            let periodosCompletos = 0;
+
+            while (
+                somarMeses(entrada, (periodosCompletos + 1) * 12)
+                <= depoisDoFim
+            ) {
+                periodosCompletos++;
+            }
+
+            const inicioPeriodo = somarMeses(
+                entrada,
+                periodosCompletos * 12
+            );
+
+            let meses = 0;
+
+            while (
+                meses < 11 &&
+                somarMeses(inicioPeriodo, meses + 1) <= depoisDoFim
+            ) {
+                meses++;
+            }
+
+            const inicioFracao = somarMeses(inicioPeriodo, meses);
+
+            if (
+                inicioFracao <= fim &&
+                diasInclusivos(inicioFracao, fim) >= 15
+            ) {
+                meses++;
+            }
+
+            return {
+                avos: Math.min(meses, 12),
+                periodosCompletos: periodosCompletos
+            };
+        }
+
+        function limparResultado(idResultado, idErro) {
+            const resultado = document.getElementById(idResultado);
+            const erro = document.getElementById(idErro);
+
+            resultado.replaceChildren();
+            resultado.hidden = true;
+
+            erro.textContent = "";
+            erro.hidden = true;
+
+            return resultado;
+        }
+
+        function mostrarErro(id, mensagem) {
+            const caixa = document.getElementById(id);
+            caixa.textContent = mensagem;
+            caixa.hidden = false;
+        }
+
+        function exibirResultado(caixa, titulo, linhas, observacoes) {
+            const cabecalho = document.createElement("h3");
+            cabecalho.textContent = titulo;
+
+            const lista = document.createElement("dl");
+
+            linhas.forEach(function (linha) {
+                const grupo = document.createElement("div");
+                const rotulo = document.createElement("dt");
+                const valor = document.createElement("dd");
+
+                rotulo.textContent = linha.rotulo;
+                valor.textContent = linha.valor;
+
+                if (linha.total) {
+                    grupo.classList.add("linha-total");
+                }
+
+                grupo.append(rotulo, valor);
+                lista.appendChild(grupo);
+            });
+
+            caixa.replaceChildren(cabecalho, lista);
+
+            observacoes.forEach(function (texto) {
+                const paragrafo = document.createElement("p");
+                paragrafo.textContent = texto;
+                caixa.appendChild(paragrafo);
+            });
+
+            caixa.hidden = false;
+        }
+
+        /* JUROS COMPOSTOS */
+
+        function calcularJurosCompostos(evento) {
+            evento.preventDefault();
+
+            const caixa = limparResultado(
+                "resultadoSelic",
+                "erroSelic"
+            );
+
+            try {
+                const inicial = lerNumero(
+                    "inicialSelic",
+                    "aporte inicial",
+                    0,
+                    1000000000
+                );
+
+                const aporte = lerNumero(
+                    "mensalSelic",
+                    "aporte mensal",
+                    0,
+                    1000000000
+                );
+
+                const anos = lerNumero(
+                    "anosSelic",
+                    "tempo em anos",
+                    1,
+                    100,
+                    true
+                );
+
+                const taxaAnual = lerNumero(
+                    "taxaSelic",
+                    "taxa anual",
+                    0,
+                    100
+                );
+
+                const meses = anos * 12;
+
+                const taxaMensal = Math.expm1(
+                    Math.log1p(taxaAnual / 100) / 12
+                );
+
+                let total = inicial;
+
+                for (let mes = 0; mes < meses; mes++) {
+                    total = total * (1 + taxaMensal) + aporte;
+                }
+
+                const investido = inicial + aporte * meses;
+                const juros = total - investido;
+
+                if (
+                    !Number.isFinite(total) ||
+                    total > Number.MAX_SAFE_INTEGER / 100
+                ) {
+                    throw new Error(
+                        "O resultado é grande demais. " +
+                        "Reduza o prazo, a taxa ou os valores."
+                    );
+                }
+
+                exibirResultado(
+                    caixa,
+                    "Resultado da simulação",
+                    [
+                        {
+                            rotulo: "Valor final bruto",
+                            valor: formatarMoeda(total),
+                            total: true
+                        },
+                        {
+                            rotulo: "Total investido",
+                            valor: formatarMoeda(investido)
+                        },
+                        {
+                            rotulo: "Rendimento bruto estimado",
+                            valor: formatarMoeda(juros)
+                        },
+                        {
+                            rotulo: "Prazo",
+                            valor: anos + " ano(s), ou " + meses + " meses"
+                        }
+                    ],
+                    [
+                        "Taxa anual constante e aportes no final " +
+                        "de cada mês.",
+
+                        "Não considera inflação, impostos ou taxas. " +
+                        "Não é uma previsão de retorno do Tesouro Selic " +
+                        "nem um cálculo de renda de aposentadoria."
+                    ]
+                );
+            } catch (erro) {
+                mostrarErro("erroSelic", erro.message);
+            }
+        }
+
+        /* RESCISÃO TRABALHISTA */
+
+        function calcularRescisao(evento) {
+            evento.preventDefault();
+
+            const caixa = limparResultado(
+                "resultadoTrabalhista",
+                "erroTrabalhista"
+            );
+
+            try {
+                const salario = lerNumero(
+                    "salarioTrabalhista",
+                    "salário bruto",
+                    0.01,
+                    10000000
+                );
+
+                const diasAviso = lerNumero(
+                    "diasAviso",
+                    "dias de aviso indenizado",
+                    0,
+                    90,
+                    true
+                );
+
+                const feriasAdquiridas = lerNumero(
+                    "feriasAdquiridas",
+                    "férias completas ainda a pagar",
+                    0,
+                    100000000
+                );
+
+                const tipo = document.getElementById(
+                    "tipoRescisao"
+                ).value;
+
+                const tiposValidos = [
+                    "demissaoSemJusta",
+                    "pedidoDemissao",
+                    "acordoComum",
+                    "demissaoJustaCausa"
+                ];
+
+                if (!tiposValidos.includes(tipo)) {
+                    throw new Error(
+                        "Selecione um tipo de desligamento válido."
+                    );
+                }
+
+                const entrada = converterDataBr(
+                    document.getElementById("dataEntrada").value
+                );
+
+                const saida = converterDataBr(
+                    document.getElementById("dataSaida").value
+                );
+
+                if (!entrada || !saida) {
+                    throw new Error(
+                        "Informe datas válidas no formato DD/MM/AAAA."
+                    );
+                }
+
+                if (saida < entrada) {
+                    throw new Error(
+                        "A saída não pode ser anterior à entrada."
+                    );
+                }
+
+                const temAvisoIndenizado =
+                    tipo === "demissaoSemJusta" ||
+                    tipo === "acordoComum";
+
+                if (!temAvisoIndenizado && diasAviso !== 0) {
+                    throw new Error(
+                        "Nesta modalidade, informe 0 nos dias " +
+                        "de aviso indenizado a receber. " +
+                        "Eventual desconto não é calculado aqui."
+                    );
+                }
+
+                const textoProjecao = document.getElementById(
+                    "fimProjetado"
+                ).value.trim();
+
+                let fimDireitos = saida;
+
+                if (textoProjecao !== "") {
+                    const projetada = converterDataBr(textoProjecao);
+
+                    if (!projetada || projetada < saida) {
+                        throw new Error(
+                            "Confira a data projetada. Ela deve ser " +
+                            "válida e não pode ser anterior à saída."
+                        );
+                    }
+
+                    if (!temAvisoIndenizado || diasAviso === 0) {
+                        throw new Error(
+                            "Preencha a projeção somente quando houver " +
+                            "aviso indenizado nesta simulação."
+                        );
+                    }
+
+                    if (
+                        diasInclusivos(saida, projetada) - 1 > 90
+                    ) {
+                        throw new Error(
+                            "A projeção está mais de 90 dias após " +
+                            "a saída. Confira a informação."
+                        );
+                    }
+
+                    fimDireitos = projetada;
+                }
+
+                const primeiroDiaMes = new Date(Date.UTC(
+                    saida.getUTCFullYear(),
+                    saida.getUTCMonth(),
+                    1
+                ));
+
+                const ultimoDiaMes = new Date(Date.UTC(
+                    saida.getUTCFullYear(),
+                    saida.getUTCMonth() + 1,
+                    0
+                ));
+
+                const inicioSaldo = new Date(Math.max(
+                    entrada.getTime(),
+                    primeiroDiaMes.getTime()
+                ));
+
+                const mesInteiro =
+                    entrada <= primeiroDiaMes &&
+                    saida.getTime() === ultimoDiaMes.getTime();
+
+                const diasSaldo = mesInteiro
+                    ? 30
+                    : Math.min(
+                        diasInclusivos(inicioSaldo, saida),
+                        30
+                    );
+
+                const saldoSalario = salario / 30 * diasSaldo;
+                const justaCausa = tipo === "demissaoJustaCausa";
+
+                const meses13 = justaCausa
+                    ? 0
+                    : calcularAvosDecimo(entrada, fimDireitos);
+
+                const dadosFerias = calcularAvosFerias(
+                    entrada,
+                    fimDireitos
+                );
+
+                const mesesFerias = justaCausa
+                    ? 0
+                    : dadosFerias.avos;
+
+                const decimo = salario / 12 * meses13;
+
+                const feriasProporcionais =
+                    salario / 12 * mesesFerias;
+
+                const terco =
+                    (feriasProporcionais + feriasAdquiridas) / 3;
+
+                let aviso = temAvisoIndenizado
+                    ? salario / 30 * diasAviso
+                    : 0;
+
+                if (tipo === "acordoComum") {
+                    aviso /= 2;
+                }
+
+                const subtotal =
+                    saldoSalario +
+                    decimo +
+                    feriasProporcionais +
+                    feriasAdquiridas +
+                    terco +
+                    aviso;
+
+                const linhas = [
+                    {
+                        rotulo:
+                            "Saldo salarial estimado (" +
+                            diasSaldo + " dias)",
+                        valor: formatarMoeda(saldoSalario)
+                    },
+                    {
+                        rotulo:
+                            "13º do ano final considerado (" +
+                            meses13 + "/12)",
+                        valor: formatarMoeda(decimo)
+                    },
+                    {
+                        rotulo:
+                            "Férias proporcionais (" +
+                            mesesFerias + "/12)",
+                        valor: formatarMoeda(feriasProporcionais)
+                    },
+                    {
+                        rotulo: "Férias completas informadas",
+                        valor: formatarMoeda(feriasAdquiridas)
+                    },
+                    {
+                        rotulo: "Adicional de 1/3 de férias",
+                        valor: formatarMoeda(terco)
+                    },
+                    {
+                        rotulo: "Aviso indenizado",
+                        valor: formatarMoeda(aviso)
+                    },
+                    {
+                        rotulo: "Subtotal bruto das parcelas calculadas",
+                        valor: formatarMoeda(subtotal),
+                        total: true
+                    }
+                ];
+
+                if (temAvisoIndenizado) {
+                    const campoFgts = document.getElementById(
+                        "saldoFgts"
+                    );
+
+                    if (campoFgts.value.trim() === "") {
+                        linhas.push({
+                            rotulo: "Multa do FGTS, separada do subtotal",
+                            valor: "Não calculada: base não informada"
+                        });
+                    } else {
+                        const baseFgts = lerNumero(
+                            "saldoFgts",
+                            "base do FGTS para fins rescisórios",
+                            0,
+                            1000000000
+                        );
+
+                        const percentualMulta =
+                            tipo === "acordoComum" ? 0.20 : 0.40;
+
+                        linhas.push({
+                            rotulo:
+                                "Multa estimada do FGTS (" +
+                                percentualMulta * 100 +
+                                "%), separada do subtotal",
+                            valor: formatarMoeda(
+                                baseFgts * percentualMulta
+                            )
+                        });
+                    }
+                }
+
+                const observacoes = [
+                    "Este é um subtotal bruto, não o valor líquido " +
+                    "final da rescisão.",
+
+                    "Não foram descontados INSS, Imposto de Renda, " +
+                    "adiantamentos, parcelas já pagas, aviso não " +
+                    "cumprido ou outras deduções.",
+
+                    "O saldo salarial usa uma base simplificada " +
+                    "de 30 dias. A contagem começa após a admissão " +
+                    "e considera salário integral quando o mês " +
+                    "inteiro está compreendido. Confira o critério " +
+                    "aplicável à folha.",
+
+                    "As férias proporcionais consideram o período " +
+                    "em andamento. Férias completas ainda devidas " +
+                    "precisam estar no valor informado por você.",
+
+                    "O 13º calculado corresponde ao ano da data " +
+                    "final considerada. Valores de anos anteriores " +
+                    "não quitados devem ser conferidos à parte.",
+
+                    "A multa do FGTS não foi somada ao subtotal. " +
+                    "A ferramenta não calcula nem garante saque " +
+                    "do saldo do FGTS ou seguro-desemprego."
+                ];
+
+                if (
+                    temAvisoIndenizado &&
+                    diasAviso > 0 &&
+                    textoProjecao === ""
+                ) {
+                    observacoes.push(
+                        "Atenção: você informou aviso indenizado, " +
+                        "mas não a data projetada. Os efeitos da " +
+                        "projeção no 13º e nas férias não foram incluídos."
+                    );
+                }
+
+                if (
+                    dadosFerias.periodosCompletos > 0 &&
+                    feriasAdquiridas === 0
+                ) {
+                    observacoes.push(
+                        "O contrato possui períodos completos de férias. " +
+                        "Confirme se todos já foram gozados ou pagos. " +
+                        "Nenhum valor desses períodos foi acrescentado."
+                    );
+                }
+
+                if (tipo === "pedidoDemissao") {
+                    observacoes.push(
+                        "No pedido de demissão, eventual desconto " +
+                        "do aviso precisa ser conferido separadamente."
+                    );
+                }
+
+                if (justaCausa) {
+                    observacoes.push(
+                        "Na justa causa, esta estimativa não inclui " +
+                        "13º ou férias proporcionais. Questões " +
+                        "controvertidas e regras especiais exigem " +
+                        "análise individual."
+                    );
+                }
+
+                exibirResultado(
+                    caixa,
+                    "Estimativa das parcelas da rescisão",
+                    linhas,
+                    observacoes
+                );
+            } catch (erro) {
+                mostrarErro("erroTrabalhista", erro.message);
+            }
+        }
+
+        /* EVENTOS DOS FORMULÁRIOS */
+
+        const formJuros = document.getElementById("formJuros");
+        const formRescisao = document.getElementById("formRescisao");
+
+        formJuros.addEventListener(
+            "submit",
+            calcularJurosCompostos
         );
 
-        while (inicioPeriodoAquisitivo > dataSaida) {
-            inicioPeriodoAquisitivo.setFullYear(inicioPeriodoAquisitivo.getFullYear() - 1);
-        }
-
-        const mesesFerias = calcularMesesProporcionais(
-            inicioPeriodoAquisitivo,
-            dataSaida
+        formRescisao.addEventListener(
+            "submit",
+            calcularRescisao
         );
 
-        const feriasProporcionais = (salario / 12) * mesesFerias;
-        const tercoFerias = feriasProporcionais / 3;
+        formJuros.addEventListener("input", function () {
+            limparResultado("resultadoSelic", "erroSelic");
+        });
 
-        let totalRescisao = 0;
-        let detalhes = '';
+        formRescisao.addEventListener("input", function () {
+            limparResultado(
+                "resultadoTrabalhista",
+                "erroTrabalhista"
+            );
+        });
 
-        if (tipo === 'demissaoSemJusta') {
-            const avisoPrevioIndenizado = salario;
+        formRescisao.addEventListener("change", function () {
+            limparResultado(
+                "resultadoTrabalhista",
+                "erroTrabalhista"
+            );
+        });
 
-            // Estimativa da multa de 40% sobre os depósitos do FGTS do contrato
-            const multaFgts = saldoFgts * 0.40;
+        /* Acrescenta as barras enquanto a data é digitada. */
 
-            totalRescisao =
-                saldoSalario +
-                decimoTerceiroProporcional +
-                feriasProporcionais +
-                tercoFerias +
-                avisoPrevioIndenizado +
-                multaFgts;
+        ["dataEntrada", "dataSaida", "fimProjetado"].forEach(
+            function (id) {
+                document.getElementById(id).addEventListener(
+                    "input",
+                    function (evento) {
+                        const numeros = evento.target.value
+                            .replace(/\D/g, "")
+                            .slice(0, 8);
 
-            detalhes = `
-                <br><br>
-                <strong>Valores estimados:</strong><br>
-                Saldo de salário: ${formatarMoeda(saldoSalario)}<br>
-                13º proporcional: ${formatarMoeda(decimoTerceiroProporcional)}<br>
-                Férias proporcionais: ${formatarMoeda(feriasProporcionais)}<br>
-                1/3 de férias: ${formatarMoeda(tercoFerias)}<br>
-                Aviso prévio indenizado: ${formatarMoeda(avisoPrevioIndenizado)}<br>
-                Multa de 40% do FGTS: ${formatarMoeda(multaFgts)}<br><br>
+                        let texto = numeros.slice(0, 2);
 
-                <span style="font-size:0.95rem; color:#555; font-weight:normal;">
-                    Você também pode ter direito ao saque integral do FGTS e ao seguro-desemprego, se cumprir os requisitos legais.
-                </span>
-            `;
-        }
+                        if (numeros.length > 2) {
+                            texto += "/" + numeros.slice(2, 4);
+                        }
 
-        if (tipo === 'pedidoDemissao') {
-            totalRescisao =
-                saldoSalario +
-                decimoTerceiroProporcional +
-                feriasProporcionais +
-                tercoFerias;
+                        if (numeros.length > 4) {
+                            texto += "/" + numeros.slice(4, 8);
+                        }
 
-            detalhes = `
-                <br><br>
-                <strong>Valores estimados:</strong><br>
-                Saldo de salário: ${formatarMoeda(saldoSalario)}<br>
-                13º proporcional: ${formatarMoeda(decimoTerceiroProporcional)}<br>
-                Férias proporcionais: ${formatarMoeda(feriasProporcionais)}<br>
-                1/3 de férias: ${formatarMoeda(tercoFerias)}<br><br>
+                        evento.target.value = texto;
+                    }
+                );
+            }
+        );
+    </script>
+</body>
 
-                <span style="font-size:0.95rem; color:#555; font-weight:normal;">
-                    No pedido de demissão, em regra, não há aviso prévio indenizado, saque do FGTS, multa de 40% nem seguro-desemprego.
-                </span>
-            `;
-        }
-
-        if (tipo === 'acordoComum') {
-            const avisoPrevioMetade = salario / 2;
-            const multaFgtsAcordo = saldoFgts * 0.20;
-            const saqueFgtsAcordo = saldoFgts * 0.80;
-
-            totalRescisao =
-                saldoSalario +
-                decimoTerceiroProporcional +
-                feriasProporcionais +
-                tercoFerias +
-                avisoPrevioMetade +
-                multaFgtsAcordo;
-
-            detalhes = `
-                <br><br>
-                <strong>Valores estimados:</strong><br>
-                Saldo de salário: ${formatarMoeda(saldoSalario)}<br>
-                13º proporcional: ${formatarMoeda(decimoTerceiroProporcional)}<br>
-                Férias proporcionais: ${formatarMoeda(feriasProporcionais)}<br>
-                1/3 de férias: ${formatarMoeda(tercoFerias)}<br>
-                Metade do aviso prévio indenizado: ${formatarMoeda(avisoPrevioMetade)}<br>
-                Multa de 20% do FGTS: ${formatarMoeda(multaFgtsAcordo)}<br>
-                Saque estimado do FGTS: ${formatarMoeda(saqueFgtsAcordo)}<br><br>
-
-                <span style="font-size:0.95rem; color:#555; font-weight:normal;">
-                    No acordo do artigo 484-A da CLT, o saque do FGTS é limitado a 80% do saldo e não há direito ao seguro-desemprego.
-                </span>
-            `;
-        }
-
-        if (tipo === 'demissaoJustaCausa') {
-            totalRescisao = saldoSalario;
-
-            detalhes = `
-                <br><br>
-                <strong>Valor estimado:</strong><br>
-                Saldo de salário: ${formatarMoeda(saldoSalario)}<br><br>
-
-                <span style="font-size:0.95rem; color:#d32f2f; font-weight:normal;">
-                    Atenção: na demissão por justa causa, em regra, não há 13º proporcional, férias proporcionais, multa de 40% do FGTS, saque do FGTS nem seguro-desemprego.
-                    Dependendo do caso, podem existir férias vencidas e 1/3 ainda não gozadas.
-                </span>
-            `;
-        }
-
-        resultadoBox.style.display = 'block';
-        resultadoBox.innerHTML = `
-            <strong>Valor bruto estimado das verbas rescisórias:</strong><br>
-            ${formatarMoeda(totalRescisao)}
-            ${detalhes}
-        `;
-
-    } catch (erro) {
-        alert('Ocorreu um erro interno no cálculo: ' + erro.message);
-    }
-}
-</script>
+</html>

@@ -1,0 +1,283 @@
+/*  PÁGINA DE CONTATOS */
+
+.pagina-contatos {
+    background: #f4f6f8;
+    color: #35473e;
+}
+
+.pagina-contatos main,
+.pagina-contatos main * {
+    box-sizing: border-box;
+}
+
+.pagina-contatos main {
+    display: block;
+
+    width: min(1120px, calc(100% - 40px));
+    max-width: 1120px;
+
+    margin: 0 auto;
+    padding: 36px 0 64px;
+}
+
+/* Apresentação */
+
+.pagina-contatos .contato-apresentacao {
+    margin: 0 0 32px;
+    padding: clamp(28px, 5vw, 48px);
+
+    background: #eaf5ee;
+    border: 1px solid #d7e5dc;
+    border-radius: 22px;
+}
+
+.pagina-contatos .contato-etiqueta {
+    display: block;
+    margin-bottom: 16px;
+
+    color: #285c48;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.pagina-contatos h1 {
+    margin: 0 0 18px;
+
+    color: #193f32;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+.pagina-contatos .contato-apresentacao p {
+    max-width: 800px;
+    margin: 0;
+
+    color: #52635b;
+    font-size: 1.1rem;
+    line-height: 1.85;
+}
+
+/* Organização da página */
+
+.pagina-contatos .contato-grade {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 28px;
+}
+
+.pagina-contatos .contato-painel {
+    min-width: 0;
+    margin: 0;
+    padding: clamp(24px, 3vw, 32px);
+
+    background: #ffffff;
+    border: 1px solid #dce5df;
+    border-radius: 16px;
+}
+
+.pagina-contatos .contato-painel h2 {
+    margin: 0 0 16px;
+
+    color: #193f32;
+    font-size: 1.4rem;
+    line-height: 1.35;
+}
+
+.pagina-contatos .contato-painel p {
+    margin: 0 0 16px;
+    line-height: 1.8;
+}
+
+.pagina-contatos .contato-painel > :last-child {
+    margin-bottom: 0;
+}
+
+.pagina-contatos .contato-descricao {
+    color: #5b6861;
+    font-size: 0.95rem;
+}
+
+/* Aviso de disponibilidade */
+
+.pagina-contatos .contato-status {
+    padding: 16px 18px;
+
+    background: #fff7e7;
+    border: 1px solid #ead6a8;
+    border-radius: 9px;
+
+    color: #6d531b;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Formulário */
+
+.pagina-contatos .contato-campos {
+    min-width: 0;
+    margin: 24px 0 0;
+    padding: 0;
+
+    border: 0;
+}
+
+.pagina-contatos .contato-legenda {
+    margin-bottom: 20px;
+    padding: 0;
+
+    color: #234b3b;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.pagina-contatos .contato-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+
+    margin-bottom: 22px;
+}
+
+.pagina-contatos .contato-campo label {
+    color: #234b3b;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.pagina-contatos .contato-campo input,
+.pagina-contatos .contato-campo select,
+.pagina-contatos .contato-campo textarea {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 12px 14px;
+
+    background: #ffffff;
+    border: 1px solid #aebeb4;
+    border-radius: 8px;
+
+    color: #243d30;
+    font: inherit;
+    line-height: 1.6;
+}
+
+.pagina-contatos .contato-campo textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+.pagina-contatos .contato-campo small {
+    color: #59675f;
+    font-size: 0.85rem;
+    line-height: 1.65;
+}
+
+.pagina-contatos .contato-campo input:disabled,
+.pagina-contatos .contato-campo select:disabled,
+.pagina-contatos .contato-campo textarea:disabled {
+    background: #f1f4f2;
+    color: #66736b;
+    cursor: not-allowed;
+}
+
+.pagina-contatos .contato-campo input::placeholder,
+.pagina-contatos .contato-campo textarea::placeholder {
+    color: #68766d;
+    opacity: 1;
+}
+
+/* Botão */
+
+.pagina-contatos .contato-botao {
+    min-height: 48px;
+    padding: 14px 22px;
+
+    background: #285c48;
+    border: 1px solid #285c48;
+    border-radius: 9px;
+
+    color: #ffffff;
+    font: inherit;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.pagina-contatos .contato-botao:hover {
+    background: #1d4636;
+}
+
+.pagina-contatos .contato-botao:disabled {
+    background: #65756b;
+    border-color: #65756b;
+    color: #ffffff;
+    cursor: not-allowed;
+}
+
+/* Orientações laterais */
+
+.pagina-contatos .contato-orientacoes {
+    display: grid;
+    gap: 22px;
+    min-width: 0;
+}
+
+.pagina-contatos .contato-orientacoes ul {
+    margin: 0;
+    padding-left: 22px;
+}
+
+.pagina-contatos .contato-orientacoes li {
+    margin-bottom: 14px;
+    line-height: 1.8;
+}
+
+.pagina-contatos .contato-orientacoes li:last-child {
+    margin-bottom: 0;
+}
+
+.pagina-contatos .contato-orientacoes a {
+    color: #285c48;
+    font-weight: 700;
+    line-height: 1.7;
+    text-underline-offset: 4px;
+}
+
+/* Navegação por teclado */
+
+.pagina-contatos main :focus-visible {
+    outline: 3px solid #367557;
+    outline-offset: 4px;
+}
+
+/* Telas menores */
+
+@media (max-width: 850px) {
+    .pagina-contatos .contato-grade {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .pagina-contatos main {
+        width: calc(100% - 24px);
+        padding: 24px 0 40px;
+    }
+
+    .pagina-contatos .contato-apresentacao {
+        padding: 28px 22px;
+        border-radius: 16px;
+    }
+
+    .pagina-contatos .contato-painel {
+        padding: 24px 20px;
+    }
+
+    .pagina-contatos .contato-botao {
+        width: 100%;
+    }
+}
